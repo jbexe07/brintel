@@ -1,118 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-    <head>
-        <title>App Brintel Monitoramento</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Aplicativo Brintel: arme e desarme seu alarme, acione o pânico e controle a automação pelo celular.">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="icon" href="favicon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <meta name="theme-color" content="#000745">
-    </head>
-    <body>
-        <header>
-            <div class="cabecalho">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/Brintel-Branco.svg" alt="Logo Brintel" width="300" height="100" loading="lazy">
-                    </a>
-                </div>
-                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <nav class="menu" id="menu" aria-label="Principal">
-                    <a class="link" href="index.html">Início</a>
-                    <a class="link" href="index.html#sobre">A Brintel</a>
-                    <a class="link" href="index.html#servicos">Serviços</a>
-                    <a class="link" href="index.html#contato">Fale Conosco</a>
-                    <a class="botaoid" href="https://jbexe07.github.io/brintelid/" target="_blank" rel="noopener">Brintel ID</a>
-                </nav>
-            </div>
-        </header>
-        <main>
-            <section class="heroapp">
-                <div class="txtheroapp">
-                    <h1>App Brintel Monitoramento</h1>
-                    <p class="slogan">Seu alarme na palma da mão!</p>
-                    <p class="subtitulo">Aplicativo de comando de alarme Brintel</p>
-                    <p class="loja">Na sua loja de aplicativos, busque por <strong>GO SECURITY</strong></p>
-                    <img src="images/gdsecurity-.webp" alt="Logo do aplicativo GO SECURITY" width="160" height="160">
-                </div>
-                <div class="imgheroapp">
-                    <img src="images/imgheroapp.webp" alt="Telas do aplicativo Brintel em um celular" width="1200" height="800" fetchpriority="high">
-                </div>
-            </section>
-            <section class="beneficios">
-                <h2>Benefícios</h2>
-                <div class="cards">
-                    <div class="beneficio">
-                        <h3>Armar e desarmar de onde estiver</h3>
-                        <p>Ative ou desative seu alarme com um toque no cadeado. Se o seu sistema tem partições, como parte interna e externa, você escolhe qual área proteger.</p>
-                    </div>
-                    <div class="beneficio">
-                        <h3>Pânico no seu bolso</h3>
-                        <p>Em caso de emergência, acione o pânico direto do celular, de qualquer cômodo da casa ou da empresa. O pedido de ajuda chega à central de monitoramento.</p>
-                    </div>
-                    <div class="beneficio">
-                        <h3>Entrada Segura</h3>
-                        <p>Chegando em casa e com receio? Ative a função e um cronômetro de 3 minutos começa. Se você não o desativar, a central recebe um alerta e entra em contato na hora.</p>
-                    </div>
-                    <div class="beneficio">
-                        <h3>Automação</h3>
-                        <p>Abra o portão da garagem, acenda as luzes ou ligue o ar-condicionado antes de chegar, tudo pelo aplicativo. Consulte as condições de instalação.</p>
-                    </div>
-                    <div class="beneficio">
-                        <h3>Histórico e Zonas</h3>
-                        <p>Acompanhe os eventos do seu alarme e confira quais sensores estão ativos em cada área do imóvel.</p>
-                    </div>
-                    <div class="beneficio">
-                        <h3>Chamado de Manutenção</h3>
-                        <p>Precisou de ajuda técnica? Envie uma mensagem pelo app e nós entramos em contato ou enviamos um técnico.</p>
-                    </div>
-                </div>
-            </section>
-                <section class="apresentacao">
-                <h2>Baixe a apresentação do App</h2>
-                <p>Veja o passo a passo completo de instalação e de todas as funções do aplicativo.</p>
-                <a class="btnhero" href="docs/app.pdf" target="_blank" rel="noopener">
-                    <i class="fa-solid fa-file-pdf"></i> Baixar apresentação (PDF)
-                </a>
-            </section>
-        </main>
-        <footer class="footer-azul">
-            <div class="rodape">
-                <div class="logorpd">
-                    <a href="index.html">
-                        <img src="images/Brintel-Branco.svg" alt="Logo Brintel" width="300" height="100" loading="lazy">
-                    </a>
-                </div>
-                <a class="social" href="https://www.instagram.com/brintelmonitoramento/" target="_blank" rel="noopener" aria-label="Instagram da Brintel">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <div class="copy">
-                    <p>© 2026 Brintel Monitoramento e Segurança. Todos os direitos reservados. CNPJ: 17.104.290/0001-16</p>
-                </div>
-            </div>
-            <div class="links">
-                <p class="copy">Site desenvolvido por<a class="link" href="https://kaidostd.vercel.app" target="_blank" rel="noopener">Kaido Studio</a></p>
-                <a class="link" href="politicaprivacidade.html">Política de Privacidade</a>
-            </div>
-        </footer>
-        <script>
-            const btn = document.querySelector('.menu-toggle');
-            const menu = document.getElementById('menu');
+  <head>
+    <meta charset="UTF-8" />
+<link rel="icon" type="image/svg+xml" href="/brintel/favicon.svg?v=2" />
+<link rel="apple-touch-icon" href="/brintel/apple-touch-icon.png?v=2" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#000745" />
+<script>
+  document.documentElement.classList.add('js')
+</script>
+<!-- Roboto hospedada no próprio site (subset latin, fonte variável 400–900) -->
+<link rel="preload" href="/brintel/fonts/roboto-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <title>App Brintel Monitoramento · GO SECURITY</title>
+    <meta
+      name="description"
+      content="Aplicativo de comando de alarme Brintel: arme e desarme seu alarme, acione o pânico e controle a automação pelo celular. Na loja de aplicativos, busque por GO SECURITY."
+    />
+    <script type="module" crossorigin src="/brintel/assets/island-DniWaolv.js"></script>
+    <script type="module" crossorigin src="/brintel/assets/page-BlkfqBUU.js"></script>
+    <link rel="stylesheet" crossorigin href="/brintel/assets/island-BFx2s8U9.css">
+    <link rel="stylesheet" crossorigin href="/brintel/assets/page-CMJW9g8I.css">
+  </head>
+  <body class="page">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-            btn.addEventListener('click', () => {
-                const aberto = menu.classList.toggle('aberto');
-                btn.setAttribute('aria-expanded', aberto);
-            });
+    <header class="island" id="island">
+  <a class="island__brand" href="./" aria-label="Brintel, página inicial">
+    <svg class="logo" viewBox="0 0 300 59.73" aria-hidden="true"><path class="logo__type" fill-rule="evenodd" d="M0,58.53l31.36,0q16.24.15,18.12-11.29,1.22-8-4-11,4-3.41,4.24-9.83-.16-10.25-13.41-11.26H4.48L0,58.53ZM15.69,42.34l15.7.15q4.32.4,3.84,2.93T31,48.08l-15.88,0,.6-5.71Zm1.57-16.26H33.17c2.75.4,3.95,1.42,3.63,3.11s-1.74,2.55-4.25,2.63l-15.88,0,.59-5.71ZM48.39,58.53,53,15.09H84.91q14.46,2.28,13.74,14.77A17.39,17.39,0,0,1,91,44.35l6.44,14.3H82.05L75.8,45H63.61L62.19,58.5l-13.8,0ZM65.84,26l-.79,7.54,16.94,0c2.58,0,4.07-1.22,4.45-3.53s-.8-3.65-3.53-4Zm31.7,32.63h13.74l4.57-43.43H102.41L97.54,58.59Zm15.81.13L118,15.06h31.26q13.55-.27,12.79,13.87l-3.15,29.76H146.61l3.09-27.28c.55-2.81-.55-4.12-3.32-3.94h-17l-3.29,31.25Zm136.55-.19H217.5c-9.32,0-13.23-7.75-11.8-21.7S212.87,15.19,223,15.19h31.52l-1.11,10.54-27.94,0c-2.37,0-3.87.45-4.24,1.67l-1.12,3.73,32.77,0-1.18,10.42-32.51-.12,0,2.45c0,2.06.86,3.34,2.37,3.34l29.55,0L249.9,58.53Zm6.91-43.47-2.93,27.25c-1.11,10.38,3.19,16.28,13.22,16.28h31.69L300,46.37l-28,0c-2.86,0-4.52-1.73-4.24-4.32l2.89-27Z" />
+<path class="logo__edge" fill-rule="evenodd" d="M246.28,2.77l-31.55-.34c-19.32-.2-32,5.25-34.52,16.28l-9.09,39.17h20l9.56-37c1.1-4.27.76-3.89,13.87-3.89h27.74Z" />
+<path class="logo__mark" fill-rule="evenodd" d="M248.24,4.62,216.7,4.28c-19.33-.21-32,5.25-34.53,16.27l-9.09,39.18h20l9.56-37c1.11-4.27.76-3.88,13.88-3.88h27.73Z" />
+<path class="logo__edge" fill-rule="evenodd" d="M135.18,0h38.34q12.09-.13,18.92,2.65C184,5.19,177.84,9.85,176.29,17l-8.83,40.88-4,0,8-38.21c.66-3.15.93-4.73-4.15-4.73H132.47Z" />
+<path class="logo__mark" fill-rule="evenodd" d="M137,1.8h38.34q12.08-.13,18.92,2.65c-8.45,2.54-14.61,7.2-16.15,14.34l-8.83,40.89-4,0,8-38.21c.66-3.15.93-4.73-4.15-4.73H134.24Z" /></svg>
+  </a>
+  <button class="island__toggle" type="button" aria-expanded="false" aria-controls="island-nav">
+    <span class="island__toggle-label">Menu</span>
+    <span class="island__toggle-icon" aria-hidden="true"><i></i><i></i></span>
+  </button>
+  <nav class="island__nav" id="island-nav" aria-label="Principal">
+    <ul>
+      <li><a href="./#sobre">A Brintel</a></li>
+      <li><a href="./#servicos">Serviços</a></li>
+      <li><a href="aplicativo.html">App</a></li>
+      <li><a href="./#contato">Fale conosco</a></li>
+      <li><a class="island__cta" href="brintel-id/">Brintel iD</a></li>
+    </ul>
+  </nav>
+</header>
+    <div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__ring"></span><span class="cursor__dot"></span></div>
 
-            menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-                menu.classList.remove('aberto');
-                btn.setAttribute('aria-expanded', 'false');
-            }));
-        </script>
-    </body>
+    <main id="conteudo">
+      <!-- Abertura ------------------------------------------------------------- -->
+      <section class="app-hero" aria-labelledby="app-titulo">
+        <div class="app-hero__text">
+          <p class="kicker">App Brintel Monitoramento</p>
+          <h1 class="app-hero__title" id="app-titulo">
+            <span class="line"><span>Seu alarme na</span></span>
+            <span class="line"><span><em>palma da mão</em>.</span></span>
+          </h1>
+          <p class="app-hero__lead">Aplicativo de comando de alarme Brintel.</p>
+
+          <div class="store">
+            <span class="store__label">Na sua loja de aplicativos, busque por</span>
+            <strong class="store__name">GO SECURITY</strong>
+          </div>
+        </div>
+
+        <img
+          class="app-hero__phone"
+          src="/brintel/img/app-brintel.webp"
+          alt="Celular com o aplicativo Brintel mostrando o alarme desarmado e o histórico de eventos"
+          width="1920"
+          height="1920"
+          fetchpriority="high"
+        />
+      </section>
+
+      <!-- Benefícios ------------------------------------------------------------ -->
+      <section class="perks" aria-labelledby="beneficios-titulo">
+        <p class="kicker">Benefícios</p>
+        <h2 class="title" id="beneficios-titulo">
+          <span class="line"><span>O que você faz <em>pelo app</em></span></span>
+        </h2>
+
+        <ol class="perks__list">
+          <li class="perk">
+            <span class="perk__n" aria-hidden="true">01</span>
+            <h3 class="perk__title">Armar e desarmar de onde estiver</h3>
+            <p>
+              Ative ou desative seu alarme com um toque no cadeado. Se o seu sistema tem partições, como parte interna e
+              externa, você escolhe qual área proteger.
+            </p>
+          </li>
+          <li class="perk">
+            <span class="perk__n" aria-hidden="true">02</span>
+            <h3 class="perk__title">Pânico no seu bolso</h3>
+            <p>
+              Em caso de emergência, acione o pânico direto do celular, de qualquer cômodo da casa ou da empresa. O pedido
+              de ajuda chega à central de monitoramento.
+            </p>
+          </li>
+          <li class="perk">
+            <span class="perk__n" aria-hidden="true">03</span>
+            <h3 class="perk__title">Entrada segura</h3>
+            <p>
+              Chegando em casa e com receio? Ative a função e um cronômetro de 3 minutos começa. Se você não o desativar, a
+              central recebe um alerta e entra em contato na hora.
+            </p>
+          </li>
+          <li class="perk">
+            <span class="perk__n" aria-hidden="true">04</span>
+            <h3 class="perk__title">Automação</h3>
+            <p>
+              Abra o portão da garagem, acenda as luzes ou ligue o ar-condicionado antes de chegar, tudo pelo aplicativo.
+              Consulte as condições de instalação.
+            </p>
+          </li>
+          <li class="perk">
+            <span class="perk__n" aria-hidden="true">05</span>
+            <h3 class="perk__title">Histórico e zonas</h3>
+            <p>Acompanhe os eventos do seu alarme e confira quais sensores estão ativos em cada área do imóvel.</p>
+          </li>
+          <li class="perk">
+            <span class="perk__n" aria-hidden="true">06</span>
+            <h3 class="perk__title">Chamado de manutenção</h3>
+            <p>Precisou de ajuda técnica? Envie uma mensagem pelo app e nós entramos em contato ou enviamos um técnico.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Apresentação em PDF ---------------------------------------------------- -->
+      <section class="doc-cta" aria-labelledby="pdf-titulo">
+        <div>
+          <p class="kicker">Passo a passo</p>
+          <h2 class="title title--sm" id="pdf-titulo"><span class="line"><span>Baixe a apresentação do App</span></span></h2>
+          <p class="doc-cta__lead">
+            Veja o passo a passo completo de instalação e de todas as funções do aplicativo.
+          </p>
+        </div>
+        <a class="btn" href="docs/app.pdf" target="_blank" rel="noopener"
+          >Baixar apresentação (PDF, 1,8 MB)<span class="sr-only"> (abre em nova aba)</span></a
+        >
+      </section>
+    </main>
+
+    <footer class="footer" id="contato">
+  <h2 class="footer__kicker">Fale com a Brintel agora</h2>
+  <a class="footer__wa" href="https://wa.me/553791724070" target="_blank" rel="noopener">
+    <span class="footer__wa-label"><i aria-hidden="true"></i>WhatsApp</span>
+    <span class="footer__wa-number">
+      <span class="line"><span>(37) 9172-4070</span></span>
+    </span>
+    <span class="btn footer__wa-cta" aria-hidden="true">Abrir conversa</span>
+    <span class="sr-only"> (abre em nova aba)</span>
+  </a>
+
+  <div class="footer__grid">
+    <div>
+      <h3 class="footer__label">Telefone</h3>
+      <a href="tel:+553732369900">(37) 3236-9900</a>
+    </div>
+    <div>
+      <h3 class="footer__label">Endereço</h3>
+      <address>
+        Av. Presidente Vargas, 1465, sala 102<br />
+        Senador Valadares, Pará de Minas - MG
+      </address>
+    </div>
+    <nav aria-label="Links do rodapé">
+      <h3 class="footer__label">Links</h3>
+      <ul>
+        <li><a href="brintel-id/">Brintel iD</a></li>
+        <li><a href="aplicativo.html">App Brintel</a></li>
+        <li><a href="https://www.quasarst.com.br" target="_blank" rel="noopener">Rastreamento Veicular<span class="sr-only"> (abre em nova aba)</span></a></li>
+        <li><a href="https://brintel.com.br/convenio/index.php" target="_blank" rel="noopener">Convênio<span class="sr-only"> (abre em nova aba)</span></a></li>
+        <li><a href="https://www.facebook.com/brintelmonitoramentoeseguranca" target="_blank" rel="noopener">Facebook<span class="sr-only"> (abre em nova aba)</span></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="footer__legal">
+    <svg class="logo footer__logo" viewBox="0 0 300 59.73" role="img" aria-label="Brintel"><path class="logo__type" fill-rule="evenodd" d="M0,58.53l31.36,0q16.24.15,18.12-11.29,1.22-8-4-11,4-3.41,4.24-9.83-.16-10.25-13.41-11.26H4.48L0,58.53ZM15.69,42.34l15.7.15q4.32.4,3.84,2.93T31,48.08l-15.88,0,.6-5.71Zm1.57-16.26H33.17c2.75.4,3.95,1.42,3.63,3.11s-1.74,2.55-4.25,2.63l-15.88,0,.59-5.71ZM48.39,58.53,53,15.09H84.91q14.46,2.28,13.74,14.77A17.39,17.39,0,0,1,91,44.35l6.44,14.3H82.05L75.8,45H63.61L62.19,58.5l-13.8,0ZM65.84,26l-.79,7.54,16.94,0c2.58,0,4.07-1.22,4.45-3.53s-.8-3.65-3.53-4Zm31.7,32.63h13.74l4.57-43.43H102.41L97.54,58.59Zm15.81.13L118,15.06h31.26q13.55-.27,12.79,13.87l-3.15,29.76H146.61l3.09-27.28c.55-2.81-.55-4.12-3.32-3.94h-17l-3.29,31.25Zm136.55-.19H217.5c-9.32,0-13.23-7.75-11.8-21.7S212.87,15.19,223,15.19h31.52l-1.11,10.54-27.94,0c-2.37,0-3.87.45-4.24,1.67l-1.12,3.73,32.77,0-1.18,10.42-32.51-.12,0,2.45c0,2.06.86,3.34,2.37,3.34l29.55,0L249.9,58.53Zm6.91-43.47-2.93,27.25c-1.11,10.38,3.19,16.28,13.22,16.28h31.69L300,46.37l-28,0c-2.86,0-4.52-1.73-4.24-4.32l2.89-27Z" />
+<path class="logo__edge" fill-rule="evenodd" d="M246.28,2.77l-31.55-.34c-19.32-.2-32,5.25-34.52,16.28l-9.09,39.17h20l9.56-37c1.1-4.27.76-3.89,13.87-3.89h27.74Z" />
+<path class="logo__mark" fill-rule="evenodd" d="M248.24,4.62,216.7,4.28c-19.33-.21-32,5.25-34.53,16.27l-9.09,39.18h20l9.56-37c1.11-4.27.76-3.88,13.88-3.88h27.73Z" />
+<path class="logo__edge" fill-rule="evenodd" d="M135.18,0h38.34q12.09-.13,18.92,2.65C184,5.19,177.84,9.85,176.29,17l-8.83,40.88-4,0,8-38.21c.66-3.15.93-4.73-4.15-4.73H132.47Z" />
+<path class="logo__mark" fill-rule="evenodd" d="M137,1.8h38.34q12.08-.13,18.92,2.65c-8.45,2.54-14.61,7.2-16.15,14.34l-8.83,40.89-4,0,8-38.21c.66-3.15.93-4.73-4.15-4.73H134.24Z" /></svg>
+    <a
+  class="footer__social"
+  href="https://www.instagram.com/brintelmonitoramento/"
+  target="_blank"
+  rel="noopener"
+  aria-label="Instagram da Brintel (abre em nova aba)"
+>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4.2" />
+    <circle class="footer__social-dot" cx="17.3" cy="6.7" r="1.1" />
+  </svg>
+</a>
+<p>© 2026 Brintel Monitoramento e Segurança. Todos os direitos reservados. CNPJ: 17.104.290/0001-16</p>
+  </div>
+  <div class="footer__credits">
+  <p>
+    Site desenvolvido por
+    <a href="https://kaidostd.vercel.app" target="_blank" rel="noopener">Kaido Studio<span class="sr-only"> (abre em nova aba)</span></a>
+  </p>
+  <a href="politicaprivacidade.html">Política de Privacidade</a>
+</div>
+</footer>
+
+  </body>
 </html>
