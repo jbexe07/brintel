@@ -1,72 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <title>Brintel Monitoramento</title>
+        <title>Brintel · Sistema de Segurança</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Brintel Monitoramento: Sistemas de segurança.">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Michroma&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <meta name="theme-color" content="#000745">
     </head>
     <body>
         <header>
             <div class="cabecalho">
                 <div class="logo">
                     <a href="index.html">
-                        <source media="(max-width: 700px)" srcset="images/Brintel-Azul.svg">
-                        <img src="images/Brintel-Azul.svg" alt="Logo Brintel Monitoramento & Segurança"> 
+                       <img src="images/Brintel-Branco.svg" alt="Logo Brintel" width="300" height="100" loading="lazy">
                     </a>
                 </div>
-                <nav class="menu">
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="menu" id="menu" aria-label="Principal">
                     <a class="link" href="#home">Início</a>
                     <a class="link" href="#sobre">A Brintel</a>
                     <a class="link" href="#servicos">Serviços</a>
                     <a class="link" href="#contato">Fale Conosco</a>
-                    <a class="botaoid" href="/brintelid.html">Brintel ID</a>
+                    <a class="botaoid" href="https://jbexe07.github.io/brintelid/" target="_blank" rel="noopener">Brintel ID</a>
                 </nav>
             </div>
         </header>
         <main>
             <section class="hero" id="home">
-                
+                <div class="txthero">
+                    <h1>SEU PATRIMÔNIO <span style="font-weight: bold; color: #FF0013;">PROTEGIDO</span> 24 HORAS</h1>
+                    <a class="btnhero" href="aplicativo.html">Conheça o App Brintel</a>
+                </div>
+                <div class="imghero">
+                    <img src="images/imghero.webp" alt="Imagem de segurança"
+                        width="1200" height="800" fetchpriority="high">
+                </div>
             </section>
             <section class="sobre" id="sobre">
-
+                <div class="imgsobre">
+                    <img src="images/Brintel-Azul.svg" alt="Logo Brintel" width="300" height="100" loading="lazy">
+                </div>
+                <div class="txtsobre">
+                    <h2>Sobre nós</h2>
+                    <p class="subtitle">Há mais de 40 anos cuidando do que é importante para você.</p>
+                    <p>A Brintel Monitoramento e Segurança nasceu em Pará de Minas em 1981 com um propósito simples: levar tranquilidade para famílias e empresas. De lá para cá, acompanhamos a evolução da segurança eletrônica e investimos em tecnologia para que nossos clientes contem com o que há de mais moderno em proteção.</p>
+                    <p>Hoje, oferecemos alarme monitorado 24 horas, venda e locação de câmeras e videomonitoramento. Nosso sistema de alarme avisa sobre disparos, falta de energia, defeitos no equipamento e princípios de incêndio, e conta com apoio de viatura a cada chamado. Pelo aplicativo Brintel, você comanda seu alarme na palma da mão, de onde estiver.</p>
+                    <p>Também nos preocupamos com o que acontece depois do problema. Com o Supervise, as imagens das suas câmeras ficam salvas em nosso servidor, e você não perde a gravação mesmo que o equipamento seja danificado ou roubado.</p>
+                    <p>Nosso compromisso é estar presente a qualquer hora do dia ou da noite, com atendimento próximo, soluções sob medida e a confiança de quem está na sua cidade há mais de quatro décadas.</p>
+                    <p><span style="font-weight:bold; color: #000745;" >Brintel: seu patrimônio protegido 24 horas.</span></p>
+                </div>
             </section>
             <section class="mvv">
-
+                <h2>Missão, Visão e Valores</h2>
+                <div class="cards">
+                    <div class="missao">
+                        <h3>Missão</h3>
+                        <p>Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum</p>
+                    </div>
+                    <div class="visao">
+                        <h3>Visão</h3>
+                        <p>Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum</p>
+                    </div>
+                    <div class="valores">
+                        <h3>Valores</h3>
+                        <ul>
+                            <li>Comprometimento</li>
+                            <li>Comprometimento</li>
+                            <li>Comprometimento</li>
+                            <li>Comprometimento</li>
+                            <li>Comprometimento</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <section class="servicos" id="servicos">
-
+                <h2>Nossos Serviços</h2>
+                <div class="cards">
+                    <div class="servico">
+                        <h3>Cerca Elétrica</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta dignissimos quia error quam optio temporibus repudiandae perspiciatis in sed eum iusto hic veritatis, facilis ex nemo quos eius quod. Accusamus.</p>
+                        <a class="btnhero">Peça um Orçamento</a>
+                    </div>
+                    <div class="servico">
+                        <h3>Portão Eletrônico</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta dignissimos quia error quam optio temporibus repudiandae perspiciatis in sed eum iusto hic veritatis, facilis ex nemo quos eius quod. Accusamus.</p>
+                        <a class="btnhero">Peça um Orçamento</a>
+                    </div>
+                    <div class="servico">
+                        <h3>Concertina</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta dignissimos quia error quam optio temporibus repudiandae perspiciatis in sed eum iusto hic veritatis, facilis ex nemo quos eius quod. Accusamus.</p>
+                        <a class="btnhero">Peça um Orçamento</a>
+                    </div>
+                    <div class="servico">
+                        <h3>Video Porteiro</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta dignissimos quia error quam optio temporibus repudiandae perspiciatis in sed eum iusto hic veritatis, facilis ex nemo quos eius quod. Accusamus.</p>
+                        <a class="btnhero">Peça um Orçamento</a>
+                    </div>
+                    <div class="servico">
+                        <h3>Controle de Acesso</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta dignissimos quia error quam optio temporibus repudiandae perspiciatis in sed eum iusto hic veritatis, facilis ex nemo quos eius quod. Accusamus.</p>
+                        <a class="btnhero">Peça um Orçamento</a>
+                    </div>
+                    <div class="servico">
+                        <h3>Sistema de Ponto Face ID</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta dignissimos quia error quam optio temporibus repudiandae perspiciatis in sed eum iusto hic veritatis, facilis ex nemo quos eius quod. Accusamus.</p>
+                        <a class="btnhero" href="https://jbexe07.github.io/brintelid/" target="_blank" rel="noopener">Saiba Mais</a>
+                    </div>
+                </div>
             </section>
             <section class="contato" id="contato">
-
+                <h2>Não encontrou o que procurava? Entre em contato conosco!</h2>
+                <div class="contatos">
+                    <div class="whatsapp">
+                        <h3>Atendimento pelo Whatsapp</h3>
+                        <p>Para sua comodidade atendemos também pelo Whatsapp.</p>
+                        <a class="btnhero" href="https://wa.me/5537999070099">
+                            <i class="fa-brands fa-whatsapp"></i> Comercial
+                        </a>
+                        <a class="btnhero" href="https://wa.me/5537999070099">
+                            <i class="fa-brands fa-whatsapp"></i> Plantão 24Hrs
+                        </a>
+                    </div>
+                    <div class="ligacao">
+                        <h3>Atendimento por Ligação</h3>
+                        <p>24 horas disponível para atendê-lo.</p>
+                            <a class="btnhero" href="tel:+553732369900">
+                                <i class="fa-solid fa-phone"></i> (37) 3236-9900
+                            </a>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
-            <div class="rodape"></div>
-                <div class="logo">
-                    <img src="images/Brintel-Azul.svg">
+            <div class="rodape">
+                <div class="logorpd">
+                    <a href="index.html">
+                        <img src="images/Brintel-Azul.svg" alt="Logo Brintel" width="300" height="100" loading="lazy">
+                    </a>
                 </div>
-                <p class="copy">© 2026 Brintel Monitoramento e Segurança. Todos direitos reservados.</p>
-                <p class="copy"></p>CNPJ: 17.104.290/0001-16</p>
-                <p class="numcontato">Telefone: (37)3236-9900</p>
+                <a class="social" href="https://www.instagram.com/brintelmonitoramento/" target="_blank" rel="noopener" aria-label="Instagram da Brintel">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <div class="copy">
+                    <p>© 2026 Brintel Monitoramento e Segurança. Todos os direitos reservados. CNPJ: 17.104.290/0001-16</p>
+                </div>
             </div>
-            <p class="endereco">Endereço: AV PRESIDENTE VARGAS, 1465 , SALA 102, SENADOR VALADARES, PARA DE MINAS – MG</p>
-            <div class="mapa">
-                <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.452639297763!2d-44.591069999999995!3d-19.8631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa73b823b1201c9%3A0x9a31e5aeb0ca7b59!2sBrintel%20Monitoramento%20e%20Seguran%C3%A7a%20Eletr%C3%B4nica!5e0!3m2!1spt-BR!2sbr!4v1792088120945!5m2!1spt-BR!2sbr"
-                title="Localização da Kurtin Cortinas no Google Maps"
-                allowfullscreen
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin">
-                </iframe>
-            <div class="rodape2">
-                <a link="copy" href="https://kaidostd.vercel.app" target="_blank">Site desenvolvido por Kaido Studio</p>
-                <a href="/privacidade" target="_blank">Politica de Privacidade</a>
+            <div class="links">
+                <p class="copy">Site desenvolvido por<a class="link" href="https://kaidostd.vercel.app" target="_blank" rel="noopener">Kaido Studio</a></p>
+                <a class="link" href="politicaprivacidade.html">Politica de Privacidade</a>   
             </div>
         </footer>
+        <script>
+            const btn = document.querySelector('.menu-toggle');
+            const menu = document.getElementById('menu');
+
+            btn.addEventListener('click', () => {
+                const aberto = menu.classList.toggle('aberto');
+                btn.setAttribute('aria-expanded', aberto);
+            });
+
+            menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+                menu.classList.remove('aberto');
+                btn.setAttribute('aria-expanded', 'false');
+            }));
+        </script>
     </body>
 </html>

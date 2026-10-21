@@ -1,64 +1,675 @@
-*{
-    margin: 0px;
-    padding: 0px;
+/* ========== VARIÁVEIS ========== */
+:root{
+    --azul: #000745;
+    --vermelho: #FF0013;
+    --vermelho-botao: #D90010;   /* mais escuro: melhor contraste com texto branco */
+    --cinza: #f1f1f1;
+    --texto: #010101;
+    --header-h: 72px;
+    --fonte: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 
-header{
-    display: flex;
+/* ========== RESET E BASE ========== */
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{ scroll-behavior: smooth; }
+
+body{
+    font-family: var(--fonte);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+section[id]{ scroll-margin-top: var(--header-h); }
+
+p{
+    font-size: 1rem;
+    padding: 10px;
+}
+
+h2{
+    font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+    padding: 10px 10px 0;
+    text-align: center;
+    color: var(--azul);
+}
+
+h3{
+    font-size: 1.25rem;
+    text-align: center;
+    color: var(--azul);
+}
+
+a:focus-visible,
+button:focus-visible{
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+/* ========== BOTÃO PADRÃO ========== */
+.btnhero{
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    background: var(--vermelho-botao);
+    color: var(--cinza);
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+}
+
+.btnhero:hover{
+    background: var(--cinza);
+    color: var(--vermelho-botao);
+    border-color: currentColor;
+}
+
+.btnhero i{ font-size: 18px; }
+
+/* ========== HEADER E MENU ========== */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--azul);
 }
 
 .cabecalho{
     display: flex;
     align-items: center;
-    padding: 15px;
-}
-
-.logo{
-    width: 40%;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    min-height: var(--header-h);
+    margin: 0 auto;
+    padding: 12px 24px;
 }
 
 .logo img{
-    width: 65%;
-    padding-right: 45%;
+    height: 44px;
+    width: auto;
 }
 
 .menu{
-    width: 60%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 8px;
 }
 
+.menu .link,
+.botaoid{
+    display: inline-block;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--cinza);
+    text-decoration: none;
+}
 
+.menu .link{
+    text-decoration: underline solid transparent;
+    text-underline-offset: 6px;
+    transition: color .3s ease, text-decoration-color .3s ease;
+}
 
-.link, .botaoid {
-  color: #010101;
-  display: inline-block;
-  padding: 15px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.2s;
+.menu .link:hover{
+    color: var(--vermelho);
+    text-decoration-color: var(--cinza);
 }
 
 .botaoid{
-    border: 1px solid black;
+    padding: 10px 20px;
+    background: var(--vermelho-botao);
     border-radius: 30px;
-    background: #FF0013;
-    padding: 10px;
+    transition: background-color .3s ease, color .3s ease;
 }
 
 .botaoid:hover{
-    color: #f1f1f1;
-    background-color: #000745;
+    background: var(--cinza);
+    color: var(--vermelho-botao);
 }
 
-.link:hover{
-  color: #FF0013;
+/* botão hambúrguer (só aparece no mobile) */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 9px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.menu-toggle span{
+    display: block;
+    height: 3px;
+    background: var(--cinza);
+    border-radius: 2px;
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1){ transform: translateY(8px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:nth-child(2){ opacity: 0; }
+.menu-toggle[aria-expanded="true"] span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
+
+/* ========== HERO ========== */
+.hero{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: var(--header-h);
+    background: var(--azul);
+}
+
+.txthero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 0 24px;
+}
+
+.txthero h1{
+    padding: 15px;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 500;
+    text-align: center;
+    color: var(--cinza);
+}
+
+.txthero .btnhero{ margin-top: clamp(24px, 6vh, 60px); }
+
+.imghero{ width: 60%; }
+
+.imghero img{
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* ========== SOBRE ========== */
+.sobre{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: clamp(24px, 5vw, 70px);
+    background: #f1f1f146;
+}
+
+.imgsobre,
+.txtsobre{ width: 50%; }
+
+.imgsobre{
+    display: flex;
+    justify-content: center;
+}
+
+.imgsobre img{
+    width: 60%;
+    max-width: 320px;
+}
+
+.txtsobre h2{ text-align: left; }
+
+.txtsobre .subtitle{
+    padding: 0 10px 10px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--azul);
+}
+
+/* ========== CARDS (grid responsivo que se adapta sozinho) ========== */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+/* ========== MISSÃO, VISÃO E VALORES ========== */
+.mvv{
+    padding: clamp(24px, 5vw, 70px);
+    background: var(--azul);
+}
+
+.mvv h2,
+.mvv h3,
+.mvv p{ color: var(--cinza); }
+
+.mvv p{ text-align: center; }
+
+.mvv li{
+    color: var(--cinza);
+}
+
+.valores ul{
+    list-style: none;          /* remove as bolinhas padrão */
+    padding: 10px;
+    text-align: center;
+}
+
+.valores li{
+    padding: 2px 0;
+}
+
+.missao, .visao, .valores{
+    padding: 20px;
+    border: 1px solid var(--cinza);
+    border-radius: 30px;
+    transition: border-color .3s ease, transform .3s ease;
+}
+
+.missao:hover, .visao:hover,
+.valores:hover{
+    border-color: var(--vermelho);
+    transform: translateY(-4px);
+}
+
+/* ========== SERVIÇOS ========== */
+.servicos{
+    padding: clamp(24px, 5vw, 70px);
+    background: var(--cinza);
+}
+
+.servico{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border: 1px solid var(--azul);
+    border-radius: 30px;
+    box-shadow: 3px 3px 2px grey;
+    transition: border-color .3s ease, transform .3s ease;
+}
+
+.servico:hover{
+    border-color: var(--vermelho);
+    transform: translateY(-4px);
+}
+
+.servico p{
+    flex-grow: 1;              /* empurra o botão para o fim do card */
+    text-align: center;
+}
+
+.servico .btnhero{ margin-top: 16px; }
+
+/* ========== CONTATO ========== */
+.contato{
+    padding: clamp(24px, 5vw, 70px);
+    background: var(--azul);
+}
+
+.contato h2,
+.contato h3,
+.contato p{ color: var(--cinza); }
+
+.contatos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 10%;
+    padding: 40px 0 0;
+}
+
+.whatsapp,
+.ligacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex: 1 1 280px;
+    max-width: 420px;
+    text-align: center;
+}
+
+.contato .btnhero{
+    width: min(100%, 240px);
+}
+
+/* ========== FOOTER ========== */
+footer{
+    padding-top: 30px;
+    background: var(--cinza);
+}
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.logorpd img{ width: 150px; }
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 24px 20px;
+}
+
+.links a{
+    color: var(--texto);
+    text-underline-offset: 4px;
+}
+
+.links a:hover{ color: var(--vermelho-botao); }
+
+.links p a{ margin-left: .4em; }
+
+/* ========== TABLET ========== */
+@media (max-width: 992px){
+    .txthero h1{ font-size: clamp(2rem, 5vw, 3rem); }
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 768px){
+    .menu-toggle{ display: flex; }
+
+    .menu{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px 24px 24px;
+        background: var(--azul);
+        border-top: 1px solid rgba(241, 241, 241, .2);
+    }
+
+    .menu.aberto{ display: flex; }
+
+    .hero{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .txthero,
+    .imghero{ width: 100%; }
+
+    .txthero{ padding-top: 40px; }
+
+    .sobre{ flex-direction: column; }
+
+    .imgsobre,
+    .txtsobre{ width: 100%; }
+
+    .txtsobre h2{ text-align: center; }
+
+    .links{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* ========== ACESSIBILIDADE: MENOS MOVIMENTO ========== */
+@media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *, *::before, *::after{
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
 }
 
 
+/*========= POLÍTICA DE PRIVACIDADE =========*/
+.police{
+    max-width: 820px;
+    margin: 0 auto;
+    padding: calc(var(--header-h) + 40px) 24px 60px;
+}
+
+.police h1{
+    padding: 0 0 4px;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 800;
+    text-align: left;
+    color: var(--texto);
+}
+
+.police .versao{
+    padding: 0 0 24px;
+    font-size: .9rem;
+    color: #555;
+}
+
+.police h2{
+    margin-top: 40px;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--azul);
+}
+
+.police p,
+.police li{
+    padding: 6px 0;
+}
+
+.police ol,
+.police ul{
+    padding-left: 28px;      /* o reset global zerou o padding e escondia os marcadores */
+}
+
+.police dt{
+    margin-top: 16px;
+    font-weight: bold;
+    color: var(--azul);
+}
+
+.police dd{
+    padding: 2px 0 0;
+}
+
+.resumo{
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: var(--cinza);
+    border-left: 4px solid var(--vermelho-botao);
+    border-radius: 8px;
+}
+
+.resumo h3{
+    margin-bottom: 8px;
+    text-align: left;
+    color: var(--azul);
+}
+
+.police a{
+    color: var(--azul);
+    overflow-wrap: anywhere;   /* evita links longos estourarem no celular */
+}
+
+.rodape .social{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    color: var(--azul);
+    border: 1px solid var(--azul);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.rodape .social:hover{
+    background: var(--azul);
+    color: var(--cinza);
+}
+
+/* ========== HEROAPP ========== */
+.heroapp{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: var(--header-h);
+    background: var(--cinza);
+}
+
+.txtheroapp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 0 24px;
+}
+
+.txtheroapp h1{
+    padding: 15px;
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--azul);
+}
+
+.txtheroapp .slogan{
+    font-size: clamp(1.2rem, 2.5vw, 1.9rem);
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.txtheroapp .subtitulo{
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.txtheroapp .loja{ text-align: center; }
+
+.txtheroapp img{
+    width: 160px;
+    margin-top: 16px;
+}
+
+.imgheroapp{ width: 50%; }
+
+.imgheroapp img{
+    width: 80%;
+    margin: 0 auto;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* ========== BENEFÍCIOS ========== */
+.beneficios{
+    padding: clamp(24px, 5vw, 70px);
+    background: var(--azul);
+}
+
+.beneficios h2,
+.beneficios h3{
+    color: var(--cinza);
+}
+
+.beneficio{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 25px;
+    border: 1px solid rgba(241, 241, 241, .35);
+    border-radius: 30px;
+    transition: border-color .3s ease, transform .3s ease;
+}
+
+.beneficio:hover{
+    border-color: var(--vermelho);
+    transform: translateY(-4px);
+}
+
+.beneficio p{
+    flex-grow: 1;
+    text-align: center;
+    color: var(--cinza);
+}
+
+/* ========== APRESENTAÇÃO ========== */
+.apresentacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: clamp(24px, 5vw, 70px);
+    background: var(--cinza);
+    text-align: center;
+}
+
+.apresentacao p{
+    max-width: 560px;
+}
+
+/* ========== FOOTER AZUL (variação) ========== */
+.footer-azul{
+    background: var(--azul);
+}
+
+.footer-azul .copy p,
+.footer-azul .links p,
+.footer-azul .links a{
+    color: var(--cinza);
+}
+
+.footer-azul .links a:hover{
+    color: var(--vermelho);
+}
+
+.footer-azul .social{
+    color: var(--cinza);
+    border-color: var(--cinza);
+}
+
+.footer-azul .social:hover{
+    background: var(--cinza);
+    color: var(--azul);
+}
+
+/* ========== MOBILE (fim do arquivo) ========== */
+@media (max-width: 768px){
+    .heroapp{
+        flex-direction: column;
+        justify-content: center;
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+
+    .txtheroapp,
+    .imgheroapp{ width: 100%; }
+
+    .txtheroapp{ padding-top: 40px; }
+}

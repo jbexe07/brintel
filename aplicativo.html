@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>App Brintel Monitoramento</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Aplicativo Brintel: arme e desarme seu alarme, acione o pânico e controle a automação pelo celular.">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <meta name="theme-color" content="#000745">
+    </head>
+    <body>
+        <header>
+            <div class="cabecalho">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/Brintel-Branco.svg" alt="Logo Brintel" width="300" height="100" loading="lazy">
+                    </a>
+                </div>
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="menu" id="menu" aria-label="Principal">
+                    <a class="link" href="index.html">Início</a>
+                    <a class="link" href="index.html#sobre">A Brintel</a>
+                    <a class="link" href="index.html#servicos">Serviços</a>
+                    <a class="link" href="index.html#contato">Fale Conosco</a>
+                    <a class="botaoid" href="https://jbexe07.github.io/brintelid/" target="_blank" rel="noopener">Brintel ID</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="heroapp">
+                <div class="txtheroapp">
+                    <h1>App Brintel Monitoramento</h1>
+                    <p class="slogan">Seu alarme na palma da mão!</p>
+                    <p class="subtitulo">Aplicativo de comando de alarme Brintel</p>
+                    <p class="loja">Na sua loja de aplicativos, busque por <strong>GO SECURITY</strong></p>
+                    <img src="images/gdsecurity-.webp" alt="Logo do aplicativo GO SECURITY" width="160" height="160">
+                </div>
+                <div class="imgheroapp">
+                    <img src="images/imgheroapp.webp" alt="Telas do aplicativo Brintel em um celular" width="1200" height="800" fetchpriority="high">
+                </div>
+            </section>
+            <section class="beneficios">
+                <h2>Benefícios</h2>
+                <div class="cards">
+                    <div class="beneficio">
+                        <h3>Armar e desarmar de onde estiver</h3>
+                        <p>Ative ou desative seu alarme com um toque no cadeado. Se o seu sistema tem partições, como parte interna e externa, você escolhe qual área proteger.</p>
+                    </div>
+                    <div class="beneficio">
+                        <h3>Pânico no seu bolso</h3>
+                        <p>Em caso de emergência, acione o pânico direto do celular, de qualquer cômodo da casa ou da empresa. O pedido de ajuda chega à central de monitoramento.</p>
+                    </div>
+                    <div class="beneficio">
+                        <h3>Entrada Segura</h3>
+                        <p>Chegando em casa e com receio? Ative a função e um cronômetro de 3 minutos começa. Se você não o desativar, a central recebe um alerta e entra em contato na hora.</p>
+                    </div>
+                    <div class="beneficio">
+                        <h3>Automação</h3>
+                        <p>Abra o portão da garagem, acenda as luzes ou ligue o ar-condicionado antes de chegar, tudo pelo aplicativo. Consulte as condições de instalação.</p>
+                    </div>
+                    <div class="beneficio">
+                        <h3>Histórico e Zonas</h3>
+                        <p>Acompanhe os eventos do seu alarme e confira quais sensores estão ativos em cada área do imóvel.</p>
+                    </div>
+                    <div class="beneficio">
+                        <h3>Chamado de Manutenção</h3>
+                        <p>Precisou de ajuda técnica? Envie uma mensagem pelo app e nós entramos em contato ou enviamos um técnico.</p>
+                    </div>
+                </div>
+            </section>
+                <section class="apresentacao">
+                <h2>Baixe a apresentação do App</h2>
+                <p>Veja o passo a passo completo de instalação e de todas as funções do aplicativo.</p>
+                <a class="btnhero" href="docs/app.pdf" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-file-pdf"></i> Baixar apresentação (PDF)
+                </a>
+            </section>
+        </main>
+        <footer class="footer-azul">
+            <div class="rodape">
+                <div class="logorpd">
+                    <a href="index.html">
+                        <img src="images/Brintel-Branco.svg" alt="Logo Brintel" width="300" height="100" loading="lazy">
+                    </a>
+                </div>
+                <a class="social" href="https://www.instagram.com/brintelmonitoramento/" target="_blank" rel="noopener" aria-label="Instagram da Brintel">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <div class="copy">
+                    <p>© 2026 Brintel Monitoramento e Segurança. Todos os direitos reservados. CNPJ: 17.104.290/0001-16</p>
+                </div>
+            </div>
+            <div class="links">
+                <p class="copy">Site desenvolvido por<a class="link" href="https://kaidostd.vercel.app" target="_blank" rel="noopener">Kaido Studio</a></p>
+                <a class="link" href="politicaprivacidade.html">Política de Privacidade</a>
+            </div>
+        </footer>
+        <script>
+            const btn = document.querySelector('.menu-toggle');
+            const menu = document.getElementById('menu');
+
+            btn.addEventListener('click', () => {
+                const aberto = menu.classList.toggle('aberto');
+                btn.setAttribute('aria-expanded', aberto);
+            });
+
+            menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+                menu.classList.remove('aberto');
+                btn.setAttribute('aria-expanded', 'false');
+            }));
+        </script>
+    </body>
+</html>
