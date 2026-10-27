@@ -17,10 +17,10 @@
       content="Brintel iD: ponto eletrônico por reconhecimento facial, 100% em nuvem e homologado pela Portaria nº 671 do MTE. Do registro ao fechamento das horas, com treinamento e suporte. Pará de Minas - MG."
     />
     <link rel="preload" href="/brintel/img/idface-pro.webp" as="image" type="image/webp" fetchpriority="high" />
-    <script type="module" crossorigin src="/brintel/assets/brintelId-DhsKJ1IP.js"></script>
+    <script type="module" crossorigin src="/brintel/assets/brintelId-BsUm141c.js"></script>
     <link rel="modulepreload" crossorigin href="/brintel/assets/island-3vHnokeJ.js">
     <link rel="stylesheet" crossorigin href="/brintel/assets/island-B5L6M4S2.css">
-    <link rel="stylesheet" crossorigin href="/brintel/assets/brintelId-ClcKDXFH.css">
+    <link rel="stylesheet" crossorigin href="/brintel/assets/brintelId-XabDvKWQ.css">
   </head>
   <body class="page-id">
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -215,6 +215,58 @@
             <p>Gestão completa, do registro até o fechamento das horas de cada colaborador.</p>
           </li>
         </ol>
+      </section>
+
+      <!-- 3b. Por dentro do sistema ------------------------------------------------
+           Telas recriadas a partir das do PDF da Brintel (mesmos módulos, colunas e
+           rótulos), com dados fictícios: nada de nomes, fotos ou horários reais. -->
+      <section class="lp-sys" id="sistema" aria-labelledby="sistema-titulo">
+        <div class="lp-sys__head">
+          <p class="lp-kicker">Por dentro do sistema</p>
+          <h2 class="lp-title" id="sistema-titulo">Tudo na <em>tela</em>, em um só lugar</h2>
+        </div>
+
+        <div class="lp-sys__body">
+          <div class="sys-tabs" role="tablist" aria-label="Telas do sistema">
+            <button class="sys-tab" role="tab" id="tab-painel" aria-controls="tela-painel" aria-selected="true">
+              <span class="sys-tab__n">01</span>
+              <strong>Painel rápido</strong>
+              <span class="sys-tab__text">Atalhos para cada rotina, as últimas marcações e as estatísticas de horas extras e faltas.</span>
+              <i class="sys-tab__bar" aria-hidden="true"></i>
+            </button>
+            <button class="sys-tab" role="tab" id="tab-funcionarios" aria-controls="tela-funcionarios" aria-selected="false" tabindex="-1">
+              <span class="sys-tab__n">02</span>
+              <strong>Funcionários</strong>
+              <span class="sys-tab__text">Cadastro dos colaboradores por empresa e departamento, com busca e filtros.</span>
+              <i class="sys-tab__bar" aria-hidden="true"></i>
+            </button>
+            <button class="sys-tab" role="tab" id="tab-apuracao" aria-controls="tela-apuracao" aria-selected="false" tabindex="-1">
+              <span class="sys-tab__n">03</span>
+              <strong>Apuração de ponto</strong>
+              <span class="sys-tab__text">Entradas e saídas de cada dia, faltas, folgas e feriados, e o banco de horas sempre em dia.</span>
+              <i class="sys-tab__bar" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- janela do sistema: o conteúdo de cada tela é montado em src/brintel-id.js -->
+          <div class="sys">
+            <div class="sys__chrome" aria-hidden="true">
+              <span class="sys__dots"><i></i><i></i><i></i></span>
+              <span class="sys__address">Brintel iD · sistema de ponto em nuvem</span>
+            </div>
+            <div class="sys__app">
+              <div class="sys__rail" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="sys__main">
+                <div class="sys__top" aria-hidden="true"><span></span><span></span><b>BRINTEL</b></div>
+                <div class="sys__screen" id="tela-painel" role="tabpanel" aria-labelledby="tab-painel"></div>
+                <div class="sys__screen" id="tela-funcionarios" role="tabpanel" aria-labelledby="tab-funcionarios" hidden></div>
+                <div class="sys__screen" id="tela-apuracao" role="tabpanel" aria-labelledby="tab-apuracao" hidden></div>
+                <p class="sys__foot" aria-hidden="true">© Control iD · Cliente: Empresa Exemplo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="lp-sys__note">Telas ilustrativas, com dados fictícios.</p>
       </section>
 
       <!-- 4. O aparelho: ficha técnica em volta da foto (dados de controlid.com.br) -->
