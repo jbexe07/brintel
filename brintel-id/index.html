@@ -17,10 +17,10 @@
       content="Brintel iD: ponto eletrônico por reconhecimento facial, 100% em nuvem e homologado pela Portaria nº 671 do MTE. Do registro ao fechamento das horas, com treinamento e suporte. Pará de Minas - MG."
     />
     <link rel="preload" href="/brintel/img/idface-pro.webp" as="image" type="image/webp" fetchpriority="high" />
-    <script type="module" crossorigin src="/brintel/assets/brintelId-BsUm141c.js"></script>
+    <script type="module" crossorigin src="/brintel/assets/brintelId-CJxZ1iXm.js"></script>
     <link rel="modulepreload" crossorigin href="/brintel/assets/island-3vHnokeJ.js">
     <link rel="stylesheet" crossorigin href="/brintel/assets/island-B5L6M4S2.css">
-    <link rel="stylesheet" crossorigin href="/brintel/assets/brintelId-XabDvKWQ.css">
+    <link rel="stylesheet" crossorigin href="/brintel/assets/brintelId-DtMLyoXS.css">
   </head>
   <body class="page-id">
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -267,6 +267,88 @@
           </div>
         </div>
         <p class="lp-sys__note">Telas ilustrativas, com dados fictícios.</p>
+      </section>
+
+      <!-- 3c. Aplicativo com geolocalização ------------------------------------------
+           Fontes: Manual RHiD (Control iD, 2023), seções 8.3 a 8.10, e notas de versão
+           do app RHiD na App Store (Control iD). Não afirmar nada além disso: fora da
+           cerca o app ALERTA e o relatório SINALIZA (o manual não fala em bloqueio). -->
+      <section class="lp-geo" id="aplicativo" aria-labelledby="geo-titulo">
+        <div class="lp-geo__head">
+          <p class="lp-kicker">Aplicativo</p>
+          <h2 class="lp-title" id="geo-titulo">O ponto no celular, com <em>localização</em></h2>
+          <p class="lp-geo__lead">
+            Pelo app RHiD, para Android e iOS, o colaborador marca o ponto de onde estiver, e cada marcação fica
+            registrada com a localização.
+          </p>
+        </div>
+
+        <div class="lp-geo__body">
+          <!-- ilustração (não é tela do app): local de trabalho com a cerca e o raio -->
+          <figure class="geo-art" aria-hidden="true">
+            <svg viewBox="0 0 320 560">
+              <rect class="geo-art__phone" x="6" y="6" width="308" height="548" rx="42" />
+              <clipPath id="geo-screen"><rect x="22" y="22" width="276" height="516" rx="30" /></clipPath>
+              <g clip-path="url(#geo-screen)">
+                <rect class="geo-art__map" x="22" y="22" width="276" height="516" />
+                <path class="geo-art__street" d="M22 150H298M22 300H298M22 430H298M90 22V538M210 22V538M22 520L298 210" />
+                <circle class="geo-art__fence" cx="160" cy="260" r="96" />
+                <g class="geo-art__pin"><path d="M160 262c-14-18-22-30-22-41a22 22 0 0 1 44 0c0 11-8 23-22 41z" /><circle cx="160" cy="221" r="8" /></g>
+                <g class="geo-art__me" transform="translate(196 292)"><circle class="geo-art__pulse" cx="0" cy="0" r="9" /><circle class="geo-art__dot" cx="0" cy="0" r="7" /></g>
+                <g class="geo-art__alert" transform="translate(222 392)"><rect x="-62" y="-44" width="124" height="28" rx="14" /><text x="0" y="-25">Fora da cerca</text></g>
+              </g>
+              <g class="geo-art__card">
+                <rect x="34" y="440" width="252" height="84" rx="18" />
+                <text class="geo-art__card-title" x="54" y="474">Registrar ponto</text>
+                <text class="geo-art__card-sub" x="54" y="500">Localização confirmada</text>
+                <circle class="geo-art__check" cx="256" cy="482" r="14" />
+                <path class="geo-art__tick" d="M249 482l5 5 9-10" />
+              </g>
+            </svg>
+          </figure>
+
+          <ul class="geo-list">
+            <li>
+              <h3>Localização em cada marcação</h3>
+              <p>O app registra onde o ponto foi marcado, com latitude e longitude. O colaborador confere a localização e confirma.</p>
+            </li>
+            <li>
+              <h3>Cerca geográfica</h3>
+              <p>A empresa cadastra os locais de trabalho no mapa, com um raio em metros. Se a marcação for feita fora da cerca, o colaborador é alertado e ela aparece sinalizada no relatório.</p>
+            </li>
+            <li>
+              <h3>Mapa para o gestor</h3>
+              <p>No relatório de marcações mobile, cada registro mostra no mapa onde foi feito, junto com os locais de trabalho cadastrados.</p>
+            </li>
+            <li>
+              <h3>Foto e reconhecimento facial</h3>
+              <p>Se a empresa exigir, o app pede uma foto na marcação e o sistema a compara com a foto cadastrada. Divergências aparecem no relatório.</p>
+            </li>
+            <li>
+              <h3>Solicitações pelo celular</h3>
+              <p>O colaborador envia justificativas, como um atestado médico com imagem, e acompanha o status. O gestor aprova ou recusa pelo próprio app.</p>
+            </li>
+            <li>
+              <h3>Modo quiosque</h3>
+              <p>Um celular ou tablet para vários colaboradores: cada um se identifica com PIN ou QR Code.</p>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="geo-chips" aria-label="Também no aplicativo">
+          <li>Android e iOS</li>
+          <li>Histórico de ponto</li>
+          <li>Comprovantes de marcação</li>
+          <li>Lembrete para marcar o ponto</li>
+          <li>Modo offline</li>
+          <li>Detecta tentativa de adulterar horário e GPS</li>
+          <li>Coletor REP-P (Portaria 671)</li>
+        </ul>
+
+        <p class="lp-geo__note">
+          Recursos do aplicativo RHiD, da Control iD. Foto, reconhecimento facial e cerca geográfica são opcionais e
+          configurados pela empresa; alguns recursos dependem da licença contratada.
+        </p>
       </section>
 
       <!-- 4. O aparelho: ficha técnica em volta da foto (dados de controlid.com.br) -->
