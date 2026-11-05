@@ -16,11 +16,10 @@
       name="description"
       content="Brintel iD: ponto eletrônico por reconhecimento facial, 100% em nuvem e homologado pela Portaria nº 671 do MTE. Do registro ao fechamento das horas, com treinamento e suporte. Pará de Minas - MG."
     />
-    <link rel="preload" href="/brintel/img/idface-pro.webp" as="image" type="image/webp" fetchpriority="high" />
-    <script type="module" crossorigin src="/brintel/assets/brintelId-CJxZ1iXm.js"></script>
+    <script type="module" crossorigin src="/brintel/assets/brintelId-LaJEr3Us.js"></script>
     <link rel="modulepreload" crossorigin href="/brintel/assets/island-3vHnokeJ.js">
     <link rel="stylesheet" crossorigin href="/brintel/assets/island-B5L6M4S2.css">
-    <link rel="stylesheet" crossorigin href="/brintel/assets/brintelId-DtMLyoXS.css">
+    <link rel="stylesheet" crossorigin href="/brintel/assets/brintelId-BYY-SikF.css">
   </head>
   <body class="page-id">
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -45,7 +44,7 @@
       <li>
         <a
           class="island__cta"
-          href="https://wa.me/553799238556?text=Quero%20conhecer%20o%20Brintel%20iD"
+          href="https://wa.me/553732369900?text=Quero%20conhecer%20o%20Brintel%20iD"
           target="_blank"
           rel="noopener"
           >Falar no WhatsApp<span class="sr-only"> (abre em nova aba)</span></a
@@ -70,7 +69,7 @@
           <div class="lp-hero__actions">
             <a
               class="btn btn--big magnetic"
-              href="https://wa.me/553799238556?text=Quero%20o%20Brintel%20iD%20na%20minha%20empresa"
+              href="https://wa.me/553732369900?text=Quero%20o%20Brintel%20iD%20na%20minha%20empresa"
               target="_blank"
               rel="noopener"
               >Quero na minha empresa<span class="sr-only"> (WhatsApp, abre em nova aba)</span></a
@@ -79,31 +78,38 @@
           </div>
         </div>
 
-        <figure class="id-device">
-          <div class="id-device__stage">
-            <svg class="id-device__rings" viewBox="0 0 400 400" aria-hidden="true">
-              <circle cx="200" cy="200" r="190" />
-              <circle cx="200" cy="200" r="150" />
-            </svg>
-            <span class="id-device__halo" aria-hidden="true"></span>
-            <!-- imagem + efeitos num só bloco: inclinam juntos com o mouse -->
-            <div class="id-device__body">
-              <img
-                class="id-device__img"
-                src="/brintel/img/idface-pro.webp"
-                alt="Coletor de ponto Control iD ID Face Pro, com tela de reconhecimento facial"
-                width="630"
-                height="630"
-                fetchpriority="high"
-              />
-              <span class="id-device__sheen" aria-hidden="true"><i></i></span>
-              <span class="id-device__scan" aria-hidden="true"><i></i></span>
+        <!-- o sistema na abertura: painel montado em src/system-screens.js (dados fictícios) -->
+        <figure class="hero-sys">
+          <div class="hero-sys__stage">
+            <span class="hero-sys__halo" aria-hidden="true"></span>
+            <!-- janela + reflexo num só bloco: inclinam juntos com o mouse -->
+            <div class="hero-sys__body" aria-hidden="true">
+              <div class="sys">
+                <div class="sys__chrome">
+                  <span class="sys__dots"><i></i><i></i><i></i></span>
+                  <span class="sys__address">Brintel iD · sistema de ponto em nuvem</span>
+                </div>
+                <div class="sys__app">
+                  <div class="sys__side"></div>
+                  <div class="sys__main">
+                    <div class="sys__top"></div>
+                    <div class="sys__screen"></div>
+                  </div>
+                </div>
+              </div>
+              <span class="hero-sys__sheen"><i></i></span>
+            </div>
+            <!-- notificação de marcação: nome e hora trocam a cada ciclo -->
+            <div class="hero-sys__toast" aria-hidden="true">
+              <svg class="hero-sys__check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" /><path d="M7 12.5l3.2 3.2L17 9" /></svg>
+              <span><b>Ponto registrado</b><span data-who>Pedro Henrique Lima</span></span>
+              <time data-when>09:11</time>
             </div>
             <span class="lp-chip lp-chip--a" aria-hidden="true">Reconhecimento facial</span>
             <span class="lp-chip lp-chip--b" aria-hidden="true">100% em nuvem</span>
             <span class="lp-chip lp-chip--c" aria-hidden="true">Portaria 671</span>
           </div>
-          <figcaption class="sr-only">Control iD ID Face Pro, coletor de marcações por reconhecimento facial</figcaption>
+          <figcaption class="sr-only">Painel do sistema de ponto Brintel iD, com horas da semana e últimas marcações (dados fictícios)</figcaption>
         </figure>
 
         <a class="lp-hero__cue" href="#lei"><span class="sr-only">Rolar para a próxima seção</span><i aria-hidden="true"></i></a>
@@ -255,13 +261,12 @@
               <span class="sys__address">Brintel iD · sistema de ponto em nuvem</span>
             </div>
             <div class="sys__app">
-              <div class="sys__rail" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="sys__side" aria-hidden="true"></div>
               <div class="sys__main">
-                <div class="sys__top" aria-hidden="true"><span></span><span></span><b>BRINTEL</b></div>
+                <div class="sys__top" aria-hidden="true"></div>
                 <div class="sys__screen" id="tela-painel" role="tabpanel" aria-labelledby="tab-painel"></div>
                 <div class="sys__screen" id="tela-funcionarios" role="tabpanel" aria-labelledby="tab-funcionarios" hidden></div>
                 <div class="sys__screen" id="tela-apuracao" role="tabpanel" aria-labelledby="tab-apuracao" hidden></div>
-                <p class="sys__foot" aria-hidden="true">© Control iD · Cliente: Empresa Exemplo</p>
               </div>
             </div>
           </div>
@@ -284,27 +289,51 @@
         </div>
 
         <div class="lp-geo__body">
-          <!-- ilustração (não é tela do app): local de trabalho com a cerca e o raio -->
-          <figure class="geo-art" aria-hidden="true">
-            <svg viewBox="0 0 320 560">
-              <rect class="geo-art__phone" x="6" y="6" width="308" height="548" rx="42" />
-              <clipPath id="geo-screen"><rect x="22" y="22" width="276" height="516" rx="30" /></clipPath>
-              <g clip-path="url(#geo-screen)">
-                <rect class="geo-art__map" x="22" y="22" width="276" height="516" />
-                <path class="geo-art__street" d="M22 150H298M22 300H298M22 430H298M90 22V538M210 22V538M22 520L298 210" />
-                <circle class="geo-art__fence" cx="160" cy="260" r="96" />
-                <g class="geo-art__pin"><path d="M160 262c-14-18-22-30-22-41a22 22 0 0 1 44 0c0 11-8 23-22 41z" /><circle cx="160" cy="221" r="8" /></g>
-                <g class="geo-art__me" transform="translate(196 292)"><circle class="geo-art__pulse" cx="0" cy="0" r="9" /><circle class="geo-art__dot" cx="0" cy="0" r="7" /></g>
-                <g class="geo-art__alert" transform="translate(222 392)"><rect x="-62" y="-44" width="124" height="28" rx="14" /><text x="0" y="-25">Fora da cerca</text></g>
-              </g>
-              <g class="geo-art__card">
-                <rect x="34" y="440" width="252" height="84" rx="18" />
-                <text class="geo-art__card-title" x="54" y="474">Registrar ponto</text>
-                <text class="geo-art__card-sub" x="54" y="500">Localização confirmada</text>
-                <circle class="geo-art__check" cx="256" cy="482" r="14" />
-                <path class="geo-art__tick" d="M249 482l5 5 9-10" />
-              </g>
-            </svg>
+          <!-- ilustração (não é tela do app): iPhone 17 Pro Max (marinho) com o local de trabalho,
+               a cerca e o raio na tela. Gira ao arrastar e mostra a traseira. -->
+          <figure class="geo-art">
+            <div class="iphone" aria-hidden="true">
+              <div class="iphone__body">
+                <!-- a espessura (camadas da lateral com os botões) entra pelo JS, em brintel-id.js -->
+                <div class="iphone__face iphone__front">
+                  <div class="iphone__glass">
+                    <div class="iphone__screen">
+                      <svg viewBox="22 -20 276 600" preserveAspectRatio="xMidYMid slice">
+                        <rect class="geo-art__map" x="22" y="-20" width="276" height="600" />
+                        <path class="geo-art__street" d="M22 150H298M22 300H298M22 430H298M22 560H298M90 -20V580M210 -20V580M22 520L298 210" />
+                        <circle class="geo-art__fence" cx="160" cy="260" r="96" />
+                        <g class="geo-art__pin"><path d="M160 262c-14-18-22-30-22-41a22 22 0 0 1 44 0c0 11-8 23-22 41z" /><circle cx="160" cy="221" r="8" /></g>
+                        <g class="geo-art__me" transform="translate(196 292)"><circle class="geo-art__pulse" cx="0" cy="0" r="9" /><circle class="geo-art__dot" cx="0" cy="0" r="7" /></g>
+                        <g class="geo-art__alert" transform="translate(222 392)"><rect x="-62" y="-44" width="124" height="28" rx="14" /><text x="0" y="-25">Fora da cerca</text></g>
+                        <g class="geo-art__card">
+                          <rect x="34" y="440" width="252" height="84" rx="18" />
+                          <text class="geo-art__card-title" x="54" y="474">Registrar ponto</text>
+                          <text class="geo-art__card-sub" x="54" y="500">Localização confirmada</text>
+                          <circle class="geo-art__check" cx="256" cy="482" r="14" />
+                          <path class="geo-art__tick" d="M249 482l5 5 9-10" />
+                        </g>
+                      </svg>
+                      <div class="iphone__status">
+                        <b>9:41</b>
+                        <span class="iphone__icons"><i class="iphone__signal"><u></u><u></u><u></u><u></u></i><i class="iphone__battery"><u></u></i></span>
+                      </div>
+                      <div class="iphone__island"></div>
+                      <div class="iphone__home"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="iphone__face iphone__back">
+                  <div class="iphone__plateau">
+                    <span class="iphone__lens iphone__lens--1"></span>
+                    <span class="iphone__lens iphone__lens--2"></span>
+                    <span class="iphone__lens iphone__lens--3"></span>
+                    <span class="iphone__flash"></span>
+                    <span class="iphone__lidar"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <figcaption class="geo-art__hint">Arraste para girar</figcaption>
           </figure>
 
           <ul class="geo-list">
@@ -359,14 +388,26 @@
         </div>
 
         <div class="lp-spec__stage">
-          <img
-            class="lp-spec__device"
-            src="/brintel/img/idface-pro.webp"
-            alt="Control iD ID Face Pro"
-            width="630"
-            height="630"
-            loading="lazy"
-          />
+          <!-- aparelho com anéis, brilho, reflexo no vidro e varredura do rosto; inclina com o mouse -->
+          <figure class="lp-spec__device id-device">
+            <svg class="id-device__rings" viewBox="0 0 400 400" aria-hidden="true">
+              <circle cx="200" cy="200" r="190" />
+              <circle cx="200" cy="200" r="150" />
+            </svg>
+            <span class="id-device__halo" aria-hidden="true"></span>
+            <div class="id-device__body">
+              <img
+                class="id-device__img"
+                src="/brintel/img/idface-pro.webp"
+                alt="Coletor de ponto Control iD ID Face Pro, com tela de reconhecimento facial"
+                width="630"
+                height="630"
+                loading="lazy"
+              />
+              <span class="id-device__sheen" aria-hidden="true"><i></i></span>
+              <span class="id-device__scan" aria-hidden="true"><i></i></span>
+            </div>
+          </figure>
           <svg class="lp-spec__lines" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
             <path d="M440 150H330l-30-40H0" />
             <path d="M430 300H0" />
@@ -401,6 +442,14 @@
               <dd>Compatível com o registro de ponto da Portaria MTP 671/2021</dd>
             </div>
           </dl>
+        </div>
+
+        <!-- compra avulsa do aparelho. PENDENTE: link de afiliado do Mercado Livre -->
+        <div class="lp-spec__buy">
+          <p>Quer só o aparelho? Ele também é vendido separadamente.</p>
+          <a class="btn btn--ml pending" href="#link-mercado-livre-pendente" target="_blank" rel="sponsored noopener"
+            >Comprar no Mercado Livre<span class="sr-only"> (abre em nova aba)</span></a
+          >
         </div>
       </section>
 
@@ -443,7 +492,7 @@
             </ul>
             <a
               class="plan__cta"
-              href="https://wa.me/553799238556?text=Quero%20contratar%20o%20Brintel%20iD%20-%20Plano%201"
+              href="https://wa.me/553732369900?text=Quero%20contratar%20o%20Brintel%20iD%20-%20Plano%201"
               target="_blank"
               rel="noopener"
               >Contratar<span class="sr-only"> o plano 1 pelo WhatsApp (abre em nova aba)</span></a
@@ -461,7 +510,7 @@
             </ul>
             <a
               class="btn"
-              href="https://wa.me/553799238556?text=Quero%20contratar%20o%20Brintel%20iD%20-%20Plano%202"
+              href="https://wa.me/553732369900?text=Quero%20contratar%20o%20Brintel%20iD%20-%20Plano%202"
               target="_blank"
               rel="noopener"
               >Contratar<span class="sr-only"> o plano 2 pelo WhatsApp (abre em nova aba)</span></a
@@ -478,7 +527,7 @@
             </ul>
             <a
               class="plan__cta"
-              href="https://wa.me/553799238556?text=Quero%20contratar%20o%20Brintel%20iD%20-%20Plano%203"
+              href="https://wa.me/553732369900?text=Quero%20contratar%20o%20Brintel%20iD%20-%20Plano%203"
               target="_blank"
               rel="noopener"
               >Contratar<span class="sr-only"> o plano 3 pelo WhatsApp (abre em nova aba)</span></a
@@ -493,7 +542,7 @@
         <h2 class="lp-cta__title" id="cta-titulo">Sua empresa merece a segurança <em>Brintel</em>.</h2>
         <a
           class="btn btn--big magnetic"
-          href="https://wa.me/553799238556?text=Quero%20o%20Brintel%20iD%20na%20minha%20empresa"
+          href="https://wa.me/553732369900?text=Quero%20o%20Brintel%20iD%20na%20minha%20empresa"
           target="_blank"
           rel="noopener"
           >Falar com a Brintel agora<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></a
@@ -504,10 +553,10 @@
     <!-- Rodapé da landing page Brintel iD: contato direto, sem a navegação do site institucional -->
 <footer class="footer" id="contato">
   <h2 class="footer__kicker">Fale com a Brintel sobre o Brintel iD</h2>
-  <a class="footer__wa" href="https://wa.me/553799238556?text=Quero%20conhecer%20o%20Brintel%20iD" target="_blank" rel="noopener">
+  <a class="footer__wa" href="https://wa.me/553732369900?text=Quero%20conhecer%20o%20Brintel%20iD" target="_blank" rel="noopener">
     <span class="footer__wa-label"><i aria-hidden="true"></i>WhatsApp</span>
     <span class="footer__wa-number">
-      <span class="line"><span>(37) 9923-8556</span></span>
+      <span class="line"><span>(37) 3236-9900</span></span>
     </span>
     <span class="btn footer__wa-cta" aria-hidden="true">Abrir conversa</span>
     <span class="sr-only"> (abre em nova aba)</span>
@@ -558,7 +607,7 @@
     <!-- Atalho fixo no celular, depois da abertura -->
     <a
       class="lp-dock"
-      href="https://wa.me/553799238556?text=Quero%20o%20Brintel%20iD%20na%20minha%20empresa"
+      href="https://wa.me/553732369900?text=Quero%20o%20Brintel%20iD%20na%20minha%20empresa"
       target="_blank"
       rel="noopener"
       >Quero o Brintel iD<span class="sr-only"> (WhatsApp, abre em nova aba)</span></a
