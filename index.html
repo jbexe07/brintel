@@ -16,23 +16,13 @@
       name="description"
       content="Desde 1981 em Pará de Minas: alarme monitorado 24h com apoio de viatura, locação e venda de câmeras, cerca elétrica, portão eletrônico, concertina, vídeo porteiro, controle de acesso e ponto eletrônico Brintel iD."
     />
-    <link rel="preload" href="/brintel/models/camera.glb" as="fetch" crossorigin />
-    <script type="module" crossorigin src="/brintel/assets/main-R1MgdPvc.js"></script>
-    <link rel="modulepreload" crossorigin href="/brintel/assets/island-3vHnokeJ.js">
-    <link rel="stylesheet" crossorigin href="/brintel/assets/island-B5L6M4S2.css">
+    <script type="module" crossorigin src="/brintel/assets/main-CEwfRl9e.js"></script>
+    <link rel="modulepreload" crossorigin href="/brintel/assets/island-uWJZnCn4.js">
+    <link rel="stylesheet" crossorigin href="/brintel/assets/island-CSUI85xO.css">
+    <link rel="stylesheet" crossorigin href="/brintel/assets/main-CIVJv887.css">
   </head>
   <body>
-    <a class="skip-link" href="#sobre">Pular a abertura</a>
-
-    <div class="preloader" id="preloader" aria-hidden="true">
-      <svg class="logo preloader__logo" viewBox="0 0 300 59.73"><path class="logo__type" fill-rule="evenodd" d="M0,58.53l31.36,0q16.24.15,18.12-11.29,1.22-8-4-11,4-3.41,4.24-9.83-.16-10.25-13.41-11.26H4.48L0,58.53ZM15.69,42.34l15.7.15q4.32.4,3.84,2.93T31,48.08l-15.88,0,.6-5.71Zm1.57-16.26H33.17c2.75.4,3.95,1.42,3.63,3.11s-1.74,2.55-4.25,2.63l-15.88,0,.59-5.71ZM48.39,58.53,53,15.09H84.91q14.46,2.28,13.74,14.77A17.39,17.39,0,0,1,91,44.35l6.44,14.3H82.05L75.8,45H63.61L62.19,58.5l-13.8,0ZM65.84,26l-.79,7.54,16.94,0c2.58,0,4.07-1.22,4.45-3.53s-.8-3.65-3.53-4Zm31.7,32.63h13.74l4.57-43.43H102.41L97.54,58.59Zm15.81.13L118,15.06h31.26q13.55-.27,12.79,13.87l-3.15,29.76H146.61l3.09-27.28c.55-2.81-.55-4.12-3.32-3.94h-17l-3.29,31.25Zm136.55-.19H217.5c-9.32,0-13.23-7.75-11.8-21.7S212.87,15.19,223,15.19h31.52l-1.11,10.54-27.94,0c-2.37,0-3.87.45-4.24,1.67l-1.12,3.73,32.77,0-1.18,10.42-32.51-.12,0,2.45c0,2.06.86,3.34,2.37,3.34l29.55,0L249.9,58.53Zm6.91-43.47-2.93,27.25c-1.11,10.38,3.19,16.28,13.22,16.28h31.69L300,46.37l-28,0c-2.86,0-4.52-1.73-4.24-4.32l2.89-27Z" />
-<path class="logo__edge" fill-rule="evenodd" d="M246.28,2.77l-31.55-.34c-19.32-.2-32,5.25-34.52,16.28l-9.09,39.17h20l9.56-37c1.1-4.27.76-3.89,13.87-3.89h27.74Z" />
-<path class="logo__mark" fill-rule="evenodd" d="M248.24,4.62,216.7,4.28c-19.33-.21-32,5.25-34.53,16.27l-9.09,39.18h20l9.56-37c1.11-4.27.76-3.88,13.88-3.88h27.73Z" />
-<path class="logo__edge" fill-rule="evenodd" d="M135.18,0h38.34q12.09-.13,18.92,2.65C184,5.19,177.84,9.85,176.29,17l-8.83,40.88-4,0,8-38.21c.66-3.15.93-4.73-4.15-4.73H132.47Z" />
-<path class="logo__mark" fill-rule="evenodd" d="M137,1.8h38.34q12.08-.13,18.92,2.65c-8.45,2.54-14.61,7.2-16.15,14.34l-8.83,40.89-4,0,8-38.21c.66-3.15.93-4.73-4.15-4.73H134.24Z" /></svg>
-      <div class="preloader__bar"><i id="preloader-bar"></i></div>
-      <span class="preloader__pct" id="preloader-pct">0%</span>
-    </div>
+    <a class="skip-link" href="#app">Pular a abertura</a>
 
     <header class="island" id="island">
   <a class="island__brand" href="./" aria-label="Brintel, página inicial">
@@ -56,18 +46,17 @@
     </ul>
   </nav>
 </header>
-
-    <canvas id="stage" aria-hidden="true"></canvas>
-    <!-- Cobre o 3D quando o conteúdo começa (o render pausa por baixo) -->
-    <div class="stage-veil" aria-hidden="true"></div>
-    <div class="grain" aria-hidden="true"></div>
-<div class="cursor" aria-hidden="true"><span class="cursor__ring"></span><span class="cursor__dot"></span></div>
+    <div class="backdrop" aria-hidden="true"></div>
+    <!-- Palco do celular 3D (hero-phone.js): fixo na tela, o celular sai da
+         abertura, gira e desce até a seção App -->
+    <canvas class="phone-stage" aria-hidden="true"></canvas>
 
     <main id="conteudo">
-      <!-- Abertura: câmera 3D + frase da marca ------------------------------ -->
+      <!-- Abertura: título à esquerda, o app em ação à direita, fatos no pé ---- -->
       <section class="hero" id="inicio">
-        <p class="hero__kicker">Monitoramento e segurança · Pará de Minas - MG · desde 1981</p>
-        <div class="hero__bottom">
+        <div class="hero__main">
+          <p class="hero__kicker"><i class="hero__pulse" aria-hidden="true"></i>Central de monitoramento em operação 24h</p>
+
           <h1 class="hero__title">
             <span class="word"><span>Seu</span></span>
             <span class="word"><span>patrimônio</span></span>
@@ -75,6 +64,11 @@
             <span class="word"><span>24</span></span>
             <span class="word"><span>horas.</span></span>
           </h1>
+
+          <p class="hero__lead">
+            Alarme monitorado com apoio de viatura, câmeras e segurança eletrônica para famílias e empresas de Pará de Minas, desde 1981.
+          </p>
+
           <div class="hero__actions">
             <a
               class="btn"
@@ -83,26 +77,245 @@
               rel="noopener"
               >Falar no WhatsApp<span class="sr-only"> (abre em nova aba)</span></a
             >
-            <a class="link-arrow" href="#servicos">Ver serviços</a>
+            <a class="link-arrow" href="tel:+553732369900">(37) 3236-9900</a>
           </div>
         </div>
-        <p class="hero__cue" aria-hidden="true"><i></i>Role</p>
-      </section>
 
-      <!-- A Brintel ------------------------------------------------------------ -->
-      <section class="about" id="sobre" aria-labelledby="sobre-titulo">
-        <div class="about__year" aria-hidden="true">
-          <span class="about__since">Desde</span>
-          <span class="about__number">1981</span>
+        <!-- Celular com a tela do App Brintel: o alarme arma e desarma sozinho e o
+             histórico ganha o evento (hero-device.js). O 3D (phone.glb) entra por
+             cima quando carrega; o celular em HTML fica como reserva -->
+        <div class="hero__visual">
+          <div class="signal" aria-hidden="true"><i></i><i></i><i></i></div>
+
+          <figure class="device" role="img" aria-label="Ilustração do App Brintel: o alarme sendo armado pelo celular, com partições e histórico de eventos">
+            <div class="device__screen" aria-hidden="true">
+              <div class="device__top">
+                <svg class="logo device__logo" viewBox="0 0 300 59.73"><path class="logo__type" fill-rule="evenodd" d="M0,58.53l31.36,0q16.24.15,18.12-11.29,1.22-8-4-11,4-3.41,4.24-9.83-.16-10.25-13.41-11.26H4.48L0,58.53ZM15.69,42.34l15.7.15q4.32.4,3.84,2.93T31,48.08l-15.88,0,.6-5.71Zm1.57-16.26H33.17c2.75.4,3.95,1.42,3.63,3.11s-1.74,2.55-4.25,2.63l-15.88,0,.59-5.71ZM48.39,58.53,53,15.09H84.91q14.46,2.28,13.74,14.77A17.39,17.39,0,0,1,91,44.35l6.44,14.3H82.05L75.8,45H63.61L62.19,58.5l-13.8,0ZM65.84,26l-.79,7.54,16.94,0c2.58,0,4.07-1.22,4.45-3.53s-.8-3.65-3.53-4Zm31.7,32.63h13.74l4.57-43.43H102.41L97.54,58.59Zm15.81.13L118,15.06h31.26q13.55-.27,12.79,13.87l-3.15,29.76H146.61l3.09-27.28c.55-2.81-.55-4.12-3.32-3.94h-17l-3.29,31.25Zm136.55-.19H217.5c-9.32,0-13.23-7.75-11.8-21.7S212.87,15.19,223,15.19h31.52l-1.11,10.54-27.94,0c-2.37,0-3.87.45-4.24,1.67l-1.12,3.73,32.77,0-1.18,10.42-32.51-.12,0,2.45c0,2.06.86,3.34,2.37,3.34l29.55,0L249.9,58.53Zm6.91-43.47-2.93,27.25c-1.11,10.38,3.19,16.28,13.22,16.28h31.69L300,46.37l-28,0c-2.86,0-4.52-1.73-4.24-4.32l2.89-27Z" />
+<path class="logo__edge" fill-rule="evenodd" d="M246.28,2.77l-31.55-.34c-19.32-.2-32,5.25-34.52,16.28l-9.09,39.17h20l9.56-37c1.1-4.27.76-3.89,13.87-3.89h27.74Z" />
+<path class="logo__mark" fill-rule="evenodd" d="M248.24,4.62,216.7,4.28c-19.33-.21-32,5.25-34.53,16.27l-9.09,39.18h20l9.56-37c1.11-4.27.76-3.88,13.88-3.88h27.73Z" />
+<path class="logo__edge" fill-rule="evenodd" d="M135.18,0h38.34q12.09-.13,18.92,2.65C184,5.19,177.84,9.85,176.29,17l-8.83,40.88-4,0,8-38.21c.66-3.15.93-4.73-4.15-4.73H132.47Z" />
+<path class="logo__mark" fill-rule="evenodd" d="M137,1.8h38.34q12.08-.13,18.92,2.65c-8.45,2.54-14.61,7.2-16.15,14.34l-8.83,40.89-4,0,8-38.21c.66-3.15.93-4.73-4.15-4.73H134.24Z" /></svg>
+                <span class="device__clock">--:--</span>
+              </div>
+
+              <div class="device__arm" data-state="disarmed">
+                <svg class="device__ring" viewBox="0 0 120 120">
+                  <circle class="device__ring-track" cx="60" cy="60" r="54" />
+                  <circle class="device__ring-fill" cx="60" cy="60" r="54" pathLength="1" />
+                </svg>
+                <svg class="device__lock" viewBox="0 0 32 32">
+                  <path class="device__shackle" d="M10 14V10a6 6 0 0 1 12 0v4" />
+                  <rect class="device__body" x="7" y="14" width="18" height="14" rx="3" />
+                  <circle class="device__hole" cx="16" cy="21" r="2" />
+                </svg>
+              </div>
+
+              <p class="device__state">Desarmado</p>
+              <p class="device__hint">Toque para armar</p>
+
+              <ul class="device__parts">
+                <li>Casa</li>
+                <li>Garagem</li>
+                <li>Loja</li>
+              </ul>
+
+              <p class="device__label">Histórico</p>
+              <ol class="device__log">
+                <li><time>07:58</time>Sistema desarmado</li>
+                <li><time>07:41</time>Entrada segura iniciada</li>
+                <li><time>22:15</time>Sistema armado</li>
+                <li><time>18:06</time>Energia restabelecida</li>
+              </ol>
+
+              <p class="device__panic"><i></i>Pânico</p>
+            </div>
+          </figure>
         </div>
 
-        <div class="about__text">
+        <!-- Os três fatos numa faixa no pé da abertura -->
+        <dl class="hero__facts">
+          <div>
+            <dt>24h</dt>
+            <dd>Monitoramento todos os dias, a qualquer hora</dd>
+          </div>
+          <div>
+            <dt>Viatura</dt>
+            <dd>Apoio em cada chamado do alarme</dd>
+          </div>
+          <div>
+            <dt>1981</dt>
+            <dd>Há mais de 40 anos em Pará de Minas</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- App Brintel: o celular fica parado à esquerda enquanto as funções passam -->
+      <section class="app" id="app" aria-labelledby="app-titulo">
+        <div class="app__media">
+          <div class="smoke app__phone">
+            <img
+              class="smoke__img"
+              src="/brintel/img/app-brintel.webp"
+              alt="Celular com o aplicativo Brintel mostrando o alarme desarmado e o histórico de eventos"
+              width="1920"
+              height="1920"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="smoke__mist" aria-hidden="true"><i></i><i></i></span>
+          </div>
+        </div>
+
+        <div class="app__content">
+          <p class="kicker">App Brintel</p>
+          <h2 class="title" id="app-titulo">
+            <span class="line"><span>Seu alarme na</span></span>
+            <span class="line"><span><em>palma da mão</em>.</span></span>
+          </h2>
+          <p class="app__store">Na sua loja de aplicativos, busque por <strong>GO SECURITY</strong>.</p>
+
+          <ol class="app__steps">
+            <li>
+              <h3>Armar e desarmar</h3>
+              <p>De onde estiver, com um toque. Com partições, você escolhe qual área proteger.</p>
+            </li>
+            <li>
+              <h3>Pânico no bolso</h3>
+              <p>Acione direto do celular; o pedido de ajuda chega à central de monitoramento.</p>
+            </li>
+            <li>
+              <h3>Entrada segura</h3>
+              <p>Chegou com receio? Um cronômetro de 3 minutos começa; sem desativar, a central é avisada.</p>
+            </li>
+            <li>
+              <h3>Automação</h3>
+              <p>Portão, luzes e ar-condicionado pelo app. Consulte as condições de instalação.</p>
+            </li>
+            <li>
+              <h3>Histórico e zonas</h3>
+              <p>Os eventos do alarme e os sensores ativos em cada área do imóvel.</p>
+            </li>
+            <li>
+              <h3>Chamado de manutenção</h3>
+              <p>Mande uma mensagem pelo app e nós entramos em contato ou enviamos um técnico.</p>
+            </li>
+          </ol>
+
+          <a class="link-arrow" href="aplicativo.html">Conheça o App Brintel</a>
+        </div>
+      </section>
+
+      <!-- Momento 24h: relógio com a hora atual -------------------------------- -->
+      <section class="clock24" id="central-24h" aria-labelledby="clock-titulo">
+        <div class="clock24__text">
+          <p class="kicker">Central 24h</p>
+          <h2 class="title" id="clock-titulo">
+            <span class="line"><span>A central</span></span>
+            <span class="line"><span><em>não fecha</em>.</span></span>
+          </h2>
+          <p class="clock24__lead">
+            Madrugada, domingo ou feriado: a central de monitoramento da Brintel acompanha o seu alarme a qualquer
+            hora, com apoio de viatura em cada chamado.
+          </p>
+          <p class="clock24__now">
+            <i class="hero__pulse" aria-hidden="true"></i>Agora, <time class="clock24__time">--:--</time>: central em operação
+          </p>
+        </div>
+
+        <figure class="dial">
+          <svg viewBox="0 0 400 400" aria-hidden="true">
+            <circle class="dial__face" cx="200" cy="200" r="182" />
+            <g class="dial__ticks">
+              <line x1="217.14" y1="36.90" x2="217.77" y2="30.93" />
+              <line x1="234.10" y1="39.58" x2="235.34" y2="33.71" />
+              <line x1="250.68" y1="44.03" x2="252.53" y2="38.32" />
+              <line x1="266.70" y1="50.18" x2="269.15" y2="44.70" />
+              <line x1="296.40" y1="67.32" x2="299.92" y2="62.47" />
+              <line x1="309.74" y1="78.12" x2="313.75" y2="73.67" />
+              <line x1="321.88" y1="90.26" x2="326.33" y2="86.25" />
+              <line x1="332.68" y1="103.60" x2="337.53" y2="100.08" />
+              <line x1="349.82" y1="133.30" x2="355.30" y2="130.85" />
+              <line x1="355.97" y1="149.32" x2="361.68" y2="147.47" />
+              <line x1="360.42" y1="165.90" x2="366.29" y2="164.66" />
+              <line x1="363.10" y1="182.86" x2="369.07" y2="182.23" />
+              <line x1="363.10" y1="217.14" x2="369.07" y2="217.77" />
+              <line x1="360.42" y1="234.10" x2="366.29" y2="235.34" />
+              <line x1="355.97" y1="250.68" x2="361.68" y2="252.53" />
+              <line x1="349.82" y1="266.70" x2="355.30" y2="269.15" />
+              <line x1="332.68" y1="296.40" x2="337.53" y2="299.92" />
+              <line x1="321.88" y1="309.74" x2="326.33" y2="313.75" />
+              <line x1="309.74" y1="321.88" x2="313.75" y2="326.33" />
+              <line x1="296.40" y1="332.68" x2="299.92" y2="337.53" />
+              <line x1="266.70" y1="349.82" x2="269.15" y2="355.30" />
+              <line x1="250.68" y1="355.97" x2="252.53" y2="361.68" />
+              <line x1="234.10" y1="360.42" x2="235.34" y2="366.29" />
+              <line x1="217.14" y1="363.10" x2="217.77" y2="369.07" />
+              <line x1="182.86" y1="363.10" x2="182.23" y2="369.07" />
+              <line x1="165.90" y1="360.42" x2="164.66" y2="366.29" />
+              <line x1="149.32" y1="355.97" x2="147.47" y2="361.68" />
+              <line x1="133.30" y1="349.82" x2="130.85" y2="355.30" />
+              <line x1="103.60" y1="332.68" x2="100.08" y2="337.53" />
+              <line x1="90.26" y1="321.88" x2="86.25" y2="326.33" />
+              <line x1="78.12" y1="309.74" x2="73.67" y2="313.75" />
+              <line x1="67.32" y1="296.40" x2="62.47" y2="299.92" />
+              <line x1="50.18" y1="266.70" x2="44.70" y2="269.15" />
+              <line x1="44.03" y1="250.68" x2="38.32" y2="252.53" />
+              <line x1="39.58" y1="234.10" x2="33.71" y2="235.34" />
+              <line x1="36.90" y1="217.14" x2="30.93" y2="217.77" />
+              <line x1="36.90" y1="182.86" x2="30.93" y2="182.23" />
+              <line x1="39.58" y1="165.90" x2="33.71" y2="164.66" />
+              <line x1="44.03" y1="149.32" x2="38.32" y2="147.47" />
+              <line x1="50.18" y1="133.30" x2="44.70" y2="130.85" />
+              <line x1="67.32" y1="103.60" x2="62.47" y2="100.08" />
+              <line x1="78.12" y1="90.26" x2="73.67" y2="86.25" />
+              <line x1="90.26" y1="78.12" x2="86.25" y2="73.67" />
+              <line x1="103.60" y1="67.32" x2="100.08" y2="62.47" />
+              <line x1="133.30" y1="50.18" x2="130.85" y2="44.70" />
+              <line x1="149.32" y1="44.03" x2="147.47" y2="38.32" />
+              <line x1="165.90" y1="39.58" x2="164.66" y2="33.71" />
+              <line x1="182.86" y1="36.90" x2="182.23" y2="30.93" />
+            </g>
+            <g class="dial__marks">
+              <line class="dial__major" x1="200.00" y1="58.00" x2="200.00" y2="30.00" />
+              <line x1="276.00" y1="68.36" x2="285.00" y2="52.78" />
+              <line x1="331.64" y1="124.00" x2="347.22" y2="115.00" />
+              <line class="dial__major" x1="342.00" y1="200.00" x2="370.00" y2="200.00" />
+              <line x1="331.64" y1="276.00" x2="347.22" y2="285.00" />
+              <line x1="276.00" y1="331.64" x2="285.00" y2="347.22" />
+              <line class="dial__major" x1="200.00" y1="342.00" x2="200.00" y2="370.00" />
+              <line x1="124.00" y1="331.64" x2="115.00" y2="347.22" />
+              <line x1="68.36" y1="276.00" x2="52.78" y2="285.00" />
+              <line class="dial__major" x1="58.00" y1="200.00" x2="30.00" y2="200.00" />
+              <line x1="68.36" y1="124.00" x2="52.78" y2="115.00" />
+              <line x1="124.00" y1="68.36" x2="115.00" y2="52.78" />
+            </g>
+            <g class="dial__numbers">
+              <text x="200.00" y="84.00">12</text>
+              <text x="316.00" y="200.00">3</text>
+              <text x="200.00" y="316.00">6</text>
+              <text x="84.00" y="200.00">9</text>
+            </g>
+            <line class="dial__hour" x1="200" y1="214" x2="200" y2="108" />
+            <line class="dial__minute" x1="200" y1="222" x2="200" y2="58" />
+            <line class="dial__second" x1="200" y1="232" x2="200" y2="44" />
+            <circle class="dial__hub" cx="200" cy="200" r="8" />
+            <circle class="dial__hub-dot" cx="200" cy="200" r="3" />
+          </svg>
+          <figcaption class="dial__readout" aria-hidden="true">00:00</figcaption>
+        </figure>
+      </section>
+
+      <!-- A Brintel: a régua de 1981 até hoje --------------------------------- -->
+      <section class="about" id="sobre" aria-labelledby="sobre-titulo">
+        <div class="about__head">
           <p class="kicker">A Brintel</p>
           <h2 class="title" id="sobre-titulo">
-            <span class="line"><span>Há mais de 40 anos</span></span>
-            <span class="line"><span>cuidando do que é</span></span>
-            <span class="line"><span><em>importante</em> para você.</span></span>
+            <span class="line"><span>Há mais de 40 anos cuidando</span></span>
+            <span class="line"><span>do que é <em>importante</em> para você.</span></span>
           </h2>
+        </div>
+
+        <div class="about__body">
           <p>
             A Brintel Monitoramento e Segurança nasceu em Pará de Minas em 1981 com um propósito simples: levar
             tranquilidade para famílias e empresas. De lá para cá, acompanhamos a evolução da segurança eletrônica e
@@ -114,26 +327,48 @@
           </p>
         </div>
 
-        <ul class="about__facts">
-          <li><strong>24h</strong><span>monitoramento, todos os dias</span></li>
-          <li><strong>Viatura</strong><span>apoio a cada chamado</span></li>
-          <li><strong>App</strong><span>seu alarme na palma da mão</span></li>
-        </ul>
+        <!-- Régua do tempo: as marcas das décadas são posicionadas pelo JS -->
+        <figure class="ruler" aria-label="De 1981 até hoje">
+          <div class="ruler__ends">
+            <p class="ruler__start"><strong>1981</strong><span>Nasce em Pará de Minas</span></p>
+            <p class="ruler__end">
+              <strong><span class="ruler__years" data-since="1981">45</span> anos</strong><span>e seguimos 24h por dia</span>
+            </p>
+          </div>
+          <div class="ruler__track" aria-hidden="true">
+            <i class="ruler__fill"></i>
+            <ol class="ruler__ticks"></ol>
+          </div>
+        </figure>
       </section>
 
-      <!-- Serviços ------------------------------------------------------------- -->
+      <!-- Serviços --------------------------------------------------------------- -->
       <section class="services" id="servicos" aria-labelledby="servicos-titulo">
-        <p class="kicker">Serviços</p>
-        <h2 class="title" id="servicos-titulo">
-          <span class="line"><span>O que a Brintel <em>faz</em></span></span>
-        </h2>
+        <div class="services__head">
+          <p class="kicker">Serviços</p>
+          <h2 class="title" id="servicos-titulo">
+            <span class="line"><span>O que a Brintel <em>faz</em></span></span>
+          </h2>
+        </div>
 
-        <!-- Os dois carros-chefes, em destaque -->
-        <article class="feature" aria-labelledby="alarme-titulo">
-          <div class="feature__head">
-            <span class="feature__cam" aria-hidden="true">CAM 02</span>
-            <h3 class="feature__title" id="alarme-titulo">Alarme monitorado <em>24h</em></h3>
-            <p class="feature__lead">Proteja seu patrimônio com um sistema de alarme monitorado 24 horas por dia.</p>
+        <!-- Os dois carros-chefes lado a lado: o alarme ocupa mais espaço -->
+        <div class="services__main">
+          <article class="svc svc--alarm" aria-labelledby="alarme-titulo">
+            <span class="svc__cam" aria-hidden="true">CAM 02</span>
+            <h3 class="svc__title" id="alarme-titulo">Alarme monitorado <em>24h</em></h3>
+            <p class="svc__lead">Proteja seu patrimônio com um sistema de alarme monitorado 24 horas por dia.</p>
+            <ul class="svc__list">
+              <li>Aplicativo de comando do alarme</li>
+              <li>Cadastro só de pessoas autorizadas</li>
+              <li>Quadro de horários da sua rotina</li>
+              <li>Local do disparo e número de pulsos</li>
+              <li>Apoio de viatura em cada chamado</li>
+              <li>Vídeo monitoramento por câmeras</li>
+              <li>Pânico por botão ou pelo aplicativo</li>
+              <li>Aviso de falta de energia</li>
+              <li>Aviso de defeitos no sistema</li>
+              <li>Aviso de princípio de incêndio</li>
+            </ul>
             <a
               class="btn"
               href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20alarme%20monitorado"
@@ -141,28 +376,24 @@
               rel="noopener"
               >Pedir orçamento<span class="sr-only"> de alarme monitorado pelo WhatsApp (abre em nova aba)</span></a
             >
-          </div>
-          <ul class="feature__list">
-            <li>Aplicativo de comando do alarme</li>
-            <li>Cadastro só de pessoas autorizadas</li>
-            <li>Quadro de horários da sua rotina</li>
-            <li>Local do disparo e número de pulsos</li>
-            <li>Apoio de viatura em cada chamado</li>
-            <li>Vídeo monitoramento por câmeras</li>
-            <li>Pânico por botão ou pelo aplicativo</li>
-            <li>Aviso de falta de energia</li>
-            <li>Aviso de defeitos no sistema</li>
-            <li>Aviso de princípio de incêndio</li>
-          </ul>
-        </article>
+          </article>
 
-        <article class="feature" aria-labelledby="cameras-titulo">
-          <div class="feature__head">
-            <span class="feature__cam" aria-hidden="true">CAM 03</span>
-            <h3 class="feature__title" id="cameras-titulo">Câmeras: <em>alugue</em> ou compre</h3>
-            <p class="feature__lead">
+          <article class="svc svc--cam" aria-labelledby="cameras-titulo">
+            <span class="svc__cam" aria-hidden="true">CAM 03</span>
+            <h3 class="svc__title" id="cameras-titulo">Câmeras: <em>alugue</em> ou compre</h3>
+            <p class="svc__lead">
               O objetivo da Brintel é levar segurança até você. Por isso, além de vender, também alugamos câmeras.
             </p>
+            <dl class="svc__modes">
+              <div>
+                <dt>Locação</dt>
+                <dd>Uma pequena taxa por mês e o sistema completo de câmeras, com assistência e manutenção inclusas.</dd>
+              </div>
+              <div>
+                <dt>Venda</dt>
+                <dd>Prefere ter o equipamento? Adquira o seu próprio sistema de câmeras.</dd>
+              </div>
+            </dl>
             <a
               class="btn"
               href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20c%C3%A2meras"
@@ -170,140 +401,81 @@
               rel="noopener"
               >Pedir orçamento<span class="sr-only"> de câmeras pelo WhatsApp (abre em nova aba)</span></a
             >
-          </div>
-          <dl class="feature__modes">
-            <div>
-              <dt>Locação</dt>
-              <dd>Uma pequena taxa por mês e o sistema completo de câmeras, com assistência e manutenção inclusas.</dd>
-            </div>
-            <div>
-              <dt>Venda</dt>
-              <dd>Prefere ter o equipamento? Adquira o seu próprio sistema de câmeras.</dd>
-            </div>
-          </dl>
-        </article>
+          </article>
+        </div>
 
-        <!-- Demais serviços: uma linha cada, direto para o orçamento -->
+        <!-- Demais serviços: uma grade de linhas finas, cada célula vai ao orçamento -->
         <h3 class="services__more">Também instalamos</h3>
-        <ul class="rows">
+        <ul class="tiles">
           <li>
-            <a class="row" href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20cerca%20el%C3%A9trica" target="_blank" rel="noopener">
-              <span class="row__n" aria-hidden="true">01</span><span class="row__name">Cerca elétrica</span
-              ><span class="row__go">Pedir orçamento<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></span>
+            <a class="tile" href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20cerca%20el%C3%A9trica" target="_blank" rel="noopener">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" /></svg></span
+              ><span class="tile__n" aria-hidden="true">01</span><span class="tile__name">Cerca elétrica</span
+              ><span class="tile__go">Pedir orçamento<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></span>
             </a>
           </li>
           <li>
-            <a class="row" href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20port%C3%A3o%20eletr%C3%B4nico" target="_blank" rel="noopener">
-              <span class="row__n" aria-hidden="true">02</span><span class="row__name">Portão eletrônico</span
-              ><span class="row__go">Pedir orçamento<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></span>
+            <a class="tile" href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20port%C3%A3o%20eletr%C3%B4nico" target="_blank" rel="noopener">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-5 9 5v12" /><path d="M7 21v-8M12 21v-8M17 21v-8M3 13h18" /></svg></span
+              ><span class="tile__n" aria-hidden="true">02</span><span class="tile__name">Portão eletrônico</span
+              ><span class="tile__go">Pedir orçamento<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></span>
             </a>
           </li>
           <li>
-            <a class="row" href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20concertina" target="_blank" rel="noopener">
-              <span class="row__n" aria-hidden="true">03</span><span class="row__name">Concertina</span
-              ><span class="row__go">Pedir orçamento<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></span>
+            <a class="tile" href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20concertina" target="_blank" rel="noopener">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12h20" /><ellipse cx="6" cy="12" rx="3" ry="5" /><ellipse cx="12" cy="12" rx="3" ry="5" /><ellipse cx="18" cy="12" rx="3" ry="5" /></svg></span
+              ><span class="tile__n" aria-hidden="true">03</span><span class="tile__name">Concertina</span
+              ><span class="tile__go">Pedir orçamento<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></span>
             </a>
           </li>
           <li>
-            <a class="row" href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20v%C3%ADdeo%20porteiro" target="_blank" rel="noopener">
-              <span class="row__n" aria-hidden="true">04</span><span class="row__name">Vídeo porteiro</span
-              ><span class="row__go">Pedir orçamento<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></span>
+            <a class="tile" href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20v%C3%ADdeo%20porteiro" target="_blank" rel="noopener">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2" /><circle cx="12" cy="8" r="2.5" /><path d="M9.5 15h5M9.5 18h5" /></svg></span
+              ><span class="tile__n" aria-hidden="true">04</span><span class="tile__name">Vídeo porteiro</span
+              ><span class="tile__go">Pedir orçamento<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></span>
             </a>
           </li>
           <li>
-            <a class="row" href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20controle%20de%20acesso" target="_blank" rel="noopener">
-              <span class="row__n" aria-hidden="true">05</span><span class="row__name">Controle de acesso</span
-              ><span class="row__go">Pedir orçamento<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></span>
+            <a class="tile" href="https://wa.me/553799238556?text=Quero%20um%20or%C3%A7amento%20de%20controle%20de%20acesso" target="_blank" rel="noopener">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4" /><path d="M11 12l9-9M17 6l3 3M15 8l2 2" /></svg></span
+              ><span class="tile__n" aria-hidden="true">05</span><span class="tile__name">Controle de acesso</span
+              ><span class="tile__go">Pedir orçamento<span class="sr-only"> pelo WhatsApp (abre em nova aba)</span></span>
             </a>
           </li>
           <li>
-            <a class="row row--id" href="brintel-id/">
-              <span class="row__n" aria-hidden="true">06</span
-              ><span class="row__name">Ponto eletrônico <strong>Brintel iD</strong><small>Reconhecimento facial</small></span
-              ><span class="row__go">Conhecer</span>
+            <a class="tile tile--id" href="brintel-id/">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3" /><path d="M9 10v1M15 10v1M9.5 15a3.5 3.5 0 0 0 5 0" /></svg></span
+              ><span class="tile__n" aria-hidden="true">06</span
+              ><span class="tile__name">Ponto eletrônico <strong>Brintel iD</strong><small>Reconhecimento facial</small></span
+              ><span class="tile__go">Conhecer</span>
             </a>
           </li>
         </ul>
       </section>
 
-      <!-- App Brintel ----------------------------------------------------------- -->
-      <section class="app" id="app" aria-labelledby="app-titulo">
-        <div class="app__text">
-          <p class="kicker">App Brintel</p>
-          <h2 class="title" id="app-titulo">
-            <span class="line"><span>Seu alarme na</span></span>
-            <span class="line"><span><em>palma da mão</em>.</span></span>
-          </h2>
-          <p class="app__store">Na sua loja de aplicativos, busque por <strong>GO SECURITY</strong>.</p>
-
-          <dl class="app__list">
-            <div>
-              <dt>Armar e desarmar</dt>
-              <dd>De onde estiver, com um toque. Com partições, você escolhe qual área proteger.</dd>
-            </div>
-            <div>
-              <dt>Pânico no bolso</dt>
-              <dd>Acione direto do celular; o pedido de ajuda chega à central de monitoramento.</dd>
-            </div>
-            <div>
-              <dt>Entrada segura</dt>
-              <dd>Chegou com receio? Um cronômetro de 3 minutos começa; sem desativar, a central é avisada.</dd>
-            </div>
-            <div>
-              <dt>Automação</dt>
-              <dd>Portão, luzes e ar-condicionado pelo app. Consulte as condições de instalação.</dd>
-            </div>
-            <div>
-              <dt>Histórico e zonas</dt>
-              <dd>Os eventos do alarme e os sensores ativos em cada área do imóvel.</dd>
-            </div>
-            <div>
-              <dt>Chamado de manutenção</dt>
-              <dd>Mande uma mensagem pelo app e nós entramos em contato ou enviamos um técnico.</dd>
-            </div>
-          </dl>
-
-          <a class="link-arrow" href="aplicativo.html">Conheça o App Brintel</a>
-        </div>
-
-        <!-- foto + névoa: a mão se desfaz no fundo -->
-        <div class="smoke app__phone">
-          <img
-            class="smoke__img"
-            src="/brintel/img/app-brintel.webp"
-            alt="Celular com o aplicativo Brintel mostrando o alarme desarmado e o histórico de eventos"
-            width="1920"
-            height="1920"
-            loading="lazy"
-            decoding="async"
-          />
-          <span class="smoke__mist" aria-hidden="true"><i></i><i></i></span>
-        </div>
-      </section>
-
-      <!-- Custo x Benefício ------------------------------------------------ -->
+      <!-- Custo x Benefício: duas colunas, a de vigia é riscada item a item ---- -->
       <section class="cost" id="custo-beneficio" aria-labelledby="custo-titulo">
-        <p class="kicker">Custo x Benefício</p>
-        <h2 class="title" id="custo-titulo">
-          <span class="line"><span>Mais barato e mais eficiente</span></span>
-          <span class="line"><span>que <em>ronda e vigia</em>.</span></span>
-        </h2>
-        <p class="cost__lead">Monitoramento eletrônico é o tipo de proteção que os bancos usam.</p>
+        <div class="cost__head">
+          <p class="kicker">Custo x Benefício</p>
+          <h2 class="title" id="custo-titulo">
+            <span class="line"><span>Mais barato e mais eficiente</span></span>
+            <span class="line"><span>que <em>ronda e vigia</em>.</span></span>
+          </h2>
+          <p class="cost__lead">Monitoramento eletrônico é o tipo de proteção que os bancos usam.</p>
+        </div>
 
         <div class="vs">
-          <div class="vs__head" aria-hidden="true"><span>Ronda e vigia</span><span>Monitoramento eletrônico</span></div>
-          <div class="vs__row">
-            <p class="vs__old"><span class="sr-only">Ronda e vigia: </span><span>Funcionário no local pode ser rendido</span><i class="vs__strike"></i></p>
-            <p class="vs__new"><span class="sr-only">Monitoramento eletrônico: </span>Vigilância à distância: não há ninguém no local para ser rendido</p>
-          </div>
-          <div class="vs__row">
-            <p class="vs__old"><span class="sr-only">Ronda e vigia: </span><span>Encargos sociais</span><i class="vs__strike"></i></p>
-            <p class="vs__new"><span class="sr-only">Monitoramento eletrônico: </span>Sem encargos sociais</p>
-          </div>
-          <div class="vs__row">
-            <p class="vs__old"><span class="sr-only">Ronda e vigia: </span><span>Risco de vínculo empregatício</span><i class="vs__strike"></i></p>
-            <p class="vs__new"><span class="sr-only">Monitoramento eletrônico: </span>Sem vínculo empregatício</p>
-          </div>
+          <p class="vs__head vs__head--old" aria-hidden="true">Ronda e vigia</p>
+          <p class="vs__head vs__head--new" aria-hidden="true">Monitoramento eletrônico</p>
+
+          <p class="vs__old"><span class="sr-only">Ronda e vigia: </span><span>Funcionário no local pode ser rendido<i class="vs__strike"></i></span></p>
+          <p class="vs__new"><span class="sr-only">Monitoramento eletrônico: </span>Vigilância à distância: não há ninguém no local para ser rendido</p>
+
+          <p class="vs__old"><span class="sr-only">Ronda e vigia: </span><span>Encargos sociais<i class="vs__strike"></i></span></p>
+          <p class="vs__new"><span class="sr-only">Monitoramento eletrônico: </span>Sem encargos sociais</p>
+
+          <p class="vs__old"><span class="sr-only">Ronda e vigia: </span><span>Risco de vínculo empregatício<i class="vs__strike"></i></span></p>
+          <p class="vs__new"><span class="sr-only">Monitoramento eletrônico: </span>Sem vínculo empregatício</p>
         </div>
       </section>
     </main>
@@ -367,7 +539,7 @@
   <div class="footer__credits">
   <p>
     Site desenvolvido por
-    <a href="https://kuei-web.vercel.app" target="_blank" rel="noopener">Kuei WebStudio<span class="sr-only"> (abre em nova aba)</span></a>
+    <a href="https://kuei-web.vercel.app" target="_blank" rel="noopener">Kuei WebDesign<span class="sr-only"> (abre em nova aba)</span></a>
   </p>
   <a href="politicaprivacidade.html">Política de Privacidade</a>
 </div>

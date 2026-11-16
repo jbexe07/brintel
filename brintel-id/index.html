@@ -16,17 +16,17 @@
       name="description"
       content="Brintel iD: ponto eletrônico por reconhecimento facial, 100% em nuvem e homologado pela Portaria nº 671 do MTE. Do registro ao fechamento das horas, com treinamento e suporte. Pará de Minas - MG."
     />
-    <script type="module" crossorigin src="/brintel/assets/brintelId-pNTjn_lo.js"></script>
-    <link rel="modulepreload" crossorigin href="/brintel/assets/island-3vHnokeJ.js">
-    <link rel="stylesheet" crossorigin href="/brintel/assets/island-B5L6M4S2.css">
-    <link rel="stylesheet" crossorigin href="/brintel/assets/brintelId-WBA9WHAb.css">
+    <script type="module" crossorigin src="/brintel/assets/brintelId-D2wnKNg_.js"></script>
+    <link rel="modulepreload" crossorigin href="/brintel/assets/island-uWJZnCn4.js">
+    <link rel="stylesheet" crossorigin href="/brintel/assets/island-CSUI85xO.css">
+    <link rel="stylesheet" crossorigin href="/brintel/assets/brintelId-zi93O6yg.css">
   </head>
   <body class="page-id">
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="lp-progress" aria-hidden="true"><i></i></div>
 
-    <!-- Menu da landing page Brintel iD: só âncoras da própria página + WhatsApp -->
+    <!-- Menu da landing page Brintel iD: âncoras da própria página e um só botão (orçamento); o WhatsApp fica no hero, na chamada final, no rodapé e no atalho do celular -->
 <header class="island island--id" id="island">
   <a class="island__brand" href="#conteudo" aria-label="Brintel iD, início da página">
     <img class="island__logo-id" src="/brintel/img/brintel-id-logo.png" alt="" width="809" height="312" />
@@ -40,21 +40,11 @@
       <li><a href="#como-funciona">Como funciona</a></li>
       <li><a href="#aparelho">Aparelho</a></li>
       <li><a href="#planos">Planos</a></li>
-      <li><a href="#contato">Contato</a></li>
-      <li>
-        <a
-          class="island__cta"
-          href="https://wa.me/553732369900?text=Quero%20conhecer%20o%20Brintel%20iD"
-          target="_blank"
-          rel="noopener"
-          >Falar no WhatsApp<span class="sr-only"> (abre em nova aba)</span></a
-        >
-      </li>
+      <li><a class="island__cta" href="#orcamento">Pedir orçamento</a></li>
     </ul>
   </nav>
 </header>
-    <div class="grain" aria-hidden="true"></div>
-<div class="cursor" aria-hidden="true"><span class="cursor__ring"></span><span class="cursor__dot"></span></div>
+    <div class="backdrop" aria-hidden="true"></div>
 
     <main id="conteudo">
       <!-- 1. Abertura ------------------------------------------------------------ -->
@@ -525,13 +515,101 @@
               >Contratar<span class="sr-only"> o plano 3 pelo WhatsApp (abre em nova aba)</span></a
             >
           </article>
+          <article class="plan" aria-labelledby="plano-personalizado">
+            <h3 class="plan__name" id="plano-personalizado">Personalizado</h3>
+            <p class="plan__range">Mais de <span class="pending">00</span> colaboradores</p>
+            <p class="plan__price plan__price--text">Sob consulta</p>
+            <ul class="plan__features">
+              <li><span class="pending">Item do plano</span></li>
+              <li><span class="pending">Item do plano</span></li>
+              <li><span class="pending">Item do plano</span></li>
+            </ul>
+            <a
+              class="plan__cta"
+              href="https://wa.me/553732369900?text=Quero%20um%20plano%20personalizado%20do%20Brintel%20iD"
+              target="_blank"
+              rel="noopener"
+              >Falar com consultor<span class="sr-only"> sobre o plano personalizado pelo WhatsApp (abre em nova aba)</span></a
+            >
+          </article>
         </div>
       </section>
 
-      <!-- 7. Chamada final ----------------------------------------------------------- -->
+      <!-- 7. Orçamento: o pedido entra direto no CRM da Brintel (src/lead.js) -------- -->
+      <section class="lp-form" id="orcamento" aria-labelledby="orcamento-titulo">
+        <div class="lp-form__text">
+          <p class="lp-kicker">Orçamento</p>
+          <h2 class="lp-title lp-title--sm" id="orcamento-titulo">Receba o orçamento para a <em>sua empresa</em></h2>
+          <p class="lp-form__lead">
+            Conte quantos funcionários batem ponto e a Brintel te chama no WhatsApp com as opções de locação e de
+            aquisição do aparelho.
+          </p>
+        </div>
+
+        <form class="lead-form" id="lead-form" novalidate>
+          <div class="lead-form__grid">
+            <label class="lead-field">
+              <span>Seu nome</span>
+              <input name="nome" autocomplete="name" required minlength="2" maxlength="80" />
+            </label>
+            <label class="lead-field">
+              <span>Empresa</span>
+              <input name="empresa" autocomplete="organization" required minlength="2" maxlength="80" />
+            </label>
+            <label class="lead-field">
+              <span>WhatsApp</span>
+              <input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="(37) 99999-9999" />
+            </label>
+            <label class="lead-field">
+              <span>Cidade</span>
+              <input name="cidade" autocomplete="address-level2" maxlength="60" />
+            </label>
+            <label class="lead-field">
+              <span>Funcionários</span>
+              <select name="funcionarios" required>
+                <option value="">Selecione</option>
+                <option>Até 10</option>
+                <option>11 a 20</option>
+                <option>21 a 50</option>
+                <option>51 a 100</option>
+                <option>Mais de 100</option>
+              </select>
+            </label>
+            <label class="lead-field">
+              <span>Interesse</span>
+              <select name="tipo">
+                <option value="">Ainda não sei</option>
+                <option value="Ponto eletrônico (locação)">Locação (mensalidade)</option>
+                <option value="Ponto eletrônico (aquisição)">Aquisição do aparelho</option>
+              </select>
+            </label>
+            <label class="lead-field lead-field--wide">
+              <span>Mensagem <small>(opcional)</small></span>
+              <textarea name="mensagem" rows="3" maxlength="2000"></textarea>
+            </label>
+          </div>
+          <!-- campo isca: gente não vê, robô preenche e o CRM descarta -->
+          <input class="lead-hp" name="empresa_hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <p class="lead-form__legal">
+            Ao enviar, você concorda com a
+            <a href="https://brintel.com.br/politicaprivacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.
+          </p>
+          <p class="lead-form__msg" role="status" aria-live="polite"></p>
+          <button class="btn btn--big" type="submit">Pedir orçamento</button>
+        </form>
+      </section>
+
+      <!-- 8. Chamada final ----------------------------------------------------------- -->
       <section class="lp-cta" aria-labelledby="cta-titulo">
         <p class="lp-kicker">Conheça agora o Brintel iD</p>
-        <h2 class="lp-cta__title" id="cta-titulo">Sua empresa merece a segurança <em>Brintel</em>.</h2>
+        <h2 class="lp-cta__title" id="cta-titulo">
+          <span class="lp-cta__line">Sua empresa</span>
+          <span class="lp-cta__line">merece a</span>
+          <span class="lp-cta__line lp-cta__line--logo"
+            >segurança
+            <span class="lp-cta__logo"><img src="/brintel/img/brintel-id-logo.png" alt="Brintel iD" width="809" height="312" loading="lazy" /></span
+          ></span>
+        </h2>
         <a
           class="btn btn--big magnetic"
           href="https://wa.me/553732369900?text=Quero%20o%20Brintel%20iD%20na%20minha%20empresa"
@@ -588,22 +666,63 @@
   <div class="footer__credits">
   <p>
     Site desenvolvido por
-    <a href="https://kuei-web.vercel.app" target="_blank" rel="noopener">Kuei WebStudio<span class="sr-only"> (abre em nova aba)</span></a>
+    <a href="https://kuei-web.vercel.app" target="_blank" rel="noopener">Kuei WebDesign<span class="sr-only"> (abre em nova aba)</span></a>
   </p>
-  <a href="https://brintel.com.br/privacidade/" target="_blank" rel="noopener"
+  <a href="https://brintel.com.br/politicaprivacidade.html" target="_blank" rel="noopener"
     >Política de Privacidade<span class="sr-only"> (abre em nova aba)</span></a
   >
 </div>
 </footer>
 
-    <!-- Atalho fixo no celular, depois da abertura -->
+    <!-- Botão flutuante do WhatsApp, depois da abertura (some no rodapé, que já tem o WhatsApp) -->
     <a
       class="lp-dock"
       href="https://wa.me/553732369900?text=Quero%20o%20Brintel%20iD%20na%20minha%20empresa"
       target="_blank"
       rel="noopener"
-      >Quero o Brintel iD<span class="sr-only"> (WhatsApp, abre em nova aba)</span></a
+      ><svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.43 9.43 0 0 1-4.8-1.32l-.35-.2-3.57.93.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44zm8.04-17.48A11.29 11.29 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.89-3.33-8.04z"
+        /></svg
+      ><span class="sr-only">Falar com a Brintel no WhatsApp (abre em nova aba)</span></a
     >
+
+    <!-- Antes de abrir o WhatsApp: nome, empresa e equipe vão para o CRM e a conversa já começa com eles -->
+    <dialog class="wa-gate" id="wa-gate" aria-labelledby="wa-gate-titulo" data-lenis-prevent>
+      <form class="lead-form" novalidate>
+        <button class="wa-gate__close" type="button" aria-label="Fechar">×</button>
+        <p class="lp-kicker">WhatsApp</p>
+        <h2 class="wa-gate__title" id="wa-gate-titulo">Antes de abrir a conversa</h2>
+        <p class="wa-gate__lead">Assim a Brintel já te atende sabendo o tamanho da sua equipe.</p>
+        <label class="lead-field">
+          <span>Seu nome</span>
+          <input name="nome" autocomplete="name" required minlength="2" maxlength="80" />
+        </label>
+        <label class="lead-field">
+          <span>Empresa</span>
+          <input name="empresa" autocomplete="organization" required minlength="2" maxlength="80" />
+        </label>
+        <label class="lead-field">
+          <span>WhatsApp</span>
+          <input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="(37) 99999-9999" />
+        </label>
+        <label class="lead-field">
+          <span>Funcionários</span>
+          <select name="funcionarios" required>
+            <option value="">Selecione</option>
+            <option>Até 10</option>
+            <option>11 a 20</option>
+            <option>21 a 50</option>
+            <option>51 a 100</option>
+            <option>Mais de 100</option>
+          </select>
+        </label>
+        <input class="lead-hp" name="empresa_hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <p class="lead-form__msg" role="status" aria-live="polite"></p>
+        <button class="btn" type="submit">Abrir o WhatsApp</button>
+        <a class="wa-gate__skip" href="https://wa.me/553732369900" target="_blank" rel="noopener">Prefiro ir direto para o WhatsApp</a>
+      </form>
+    </dialog>
 
   </body>
 </html>
